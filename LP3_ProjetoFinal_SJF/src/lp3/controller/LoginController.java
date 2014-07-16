@@ -2,7 +2,7 @@ package lp3.controller;
 
 import java.util.LinkedList;
 
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+import java.util.List;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import lp3.data.memoria.DAOCliente;
@@ -13,13 +13,20 @@ import lp3.model.Cliente;
 
 public class LoginController {
 
-	private LinkedList<Cliente> listClientes;
-	private LinkedList<Administrador> listAdministradores;
+	private List<Object> listClientes;
+	private List<Object> listAdministradores;
 
 	
 	private String login;
 	private String senha;
 	
+	
+	public LoginController() {		
+		listClientes 		=  (new DAOCliente()).getList();
+		listAdministradores =  (new DAOAdministrador()).getList();
+	}
+	
+
 	public String getLogin() {
 		return login;
 	}
@@ -36,20 +43,19 @@ public class LoginController {
 		this.senha = senha;
 	}
 
-	public LoginController() {		
-		listClientes 		= (LinkedList<Cliente>) (List) (new DAOCliente()).getList();
-		listAdministradores = (LinkedList<Administrador>) (List) (new DAOAdministrador()).getList();
-	}
+	
 	
 	public String verificaLogin() {
 		
-		for (Cliente c : listClientes) {
+		for (Object cli : listClientes) {
+			Cliente c = (Cliente) cli;
 			if(login.equals(c.getUsuario()) && senha.equals(c.getSenha())) {
 				return "TYPE_CLIENTE";
 			}
 		}
 		
-		for (Administrador a : listAdministradores) {
+		for (Object adm : listAdministradores) {
+			Administrador a = (Administrador) adm;
 			if(login.equals(a.getUsuario()) && senha.equals(a.getSenha())) {
 				return "TYPE_ADM";
 			}
