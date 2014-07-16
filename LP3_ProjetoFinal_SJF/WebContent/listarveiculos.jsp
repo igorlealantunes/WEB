@@ -85,6 +85,13 @@
 	    
 	    <h:column>
 	        <f:facet name="header">
+	            <h:outputText value="Tipo" />
+	        </f:facet>
+	        <h:outputText value="#{veiculos.tipo}" />
+	    </h:column>
+	    
+	    <h:column>
+	        <f:facet name="header">
 	            <h:outputText value="Placa" />
 	        </f:facet>
 	        <h:outputText value="#{veiculos.placa}" />
