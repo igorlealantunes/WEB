@@ -63,22 +63,22 @@
 		<table>
 			<tr>
 				<td>Nome: </td> 
-				<td><h:inputText required="true"></h:inputText></td>
+				<td><h:inputText required="true" value="#{usuarioController.usuario.nome}"></h:inputText></td>
 			</tr>
 			<tr>
 				<td> Nacionalidade: </td> 
-				<td><h:inputText required="true"></h:inputText> </td>
+				<td><h:inputText required="true" value="#{usuarioController.usuario.nacionalidade}"></h:inputText> </td>
 			</tr>
 			<tr> 
 				<td colspan="2">
 					<h:selectOneMenu>
-						<f:selectItem itemValue="Masculino" itemLabel="Masculino"/>
-						<f:selectItem itemValue="Feminino" itemLabel="Feminino"/>
+						<f:selectItem itemValue="Masculino" itemLabel="Masculino" value="#{usuarioController.usuario.sexo}"/>
+						<f:selectItem itemValue="Feminino" itemLabel="Feminino" value="#{usuarioController.usuario.sexo}"/>
 					</h:selectOneMenu> 
 				</td>
 			</tr>
 			<tr>
-				<td colspan="2"> <h:commandButton value="Cadastrar" action="#"/> </td>
+				<td colspan="2"> <h:commandButton value="Cadastrar" action="#{usuarioController.addUsuario}"/> </td>
 			</tr>
 		</table>
 	</h:form>
