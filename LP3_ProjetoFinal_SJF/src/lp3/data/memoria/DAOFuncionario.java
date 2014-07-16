@@ -63,8 +63,8 @@ public class DAOFuncionario implements IDAO<Funcionario>{
 		
 	}
 	
-	public void alterar(String nomeantigo, Funcionario funcionarionovo) {
-		
+	public String alterar(String nomeantigo, Funcionario funcionarionovo) {
+		String result = "notFound";
 
 		for(Funcionario f: funcionarios) {
 			
@@ -73,11 +73,12 @@ public class DAOFuncionario implements IDAO<Funcionario>{
 				f.setNome(funcionarionovo.getNome());
 				f.setSalario(funcionarionovo.getSalario());
 				f.setFuncao(funcionarionovo.getFuncao());
+				result = "found";
 				break;
 			}
 			
 		}
-		
+		return result;
 	}
 
 }

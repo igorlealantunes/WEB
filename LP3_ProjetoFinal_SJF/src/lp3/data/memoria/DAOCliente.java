@@ -56,20 +56,21 @@ public class DAOCliente implements IDAO<Cliente>{
 		
 	}
 	
-	public void alterar(String nome, Cliente clientenovo){
-		
+	public String alterar(String nome, Cliente clientenovo){
+		String result = "notFound";
 		for(Cliente c : clientes) {
 
 			if(c.getUsuario().equalsIgnoreCase(nome))  {
 				
 				c.setUsuario(clientenovo.getUsuario());
 				c.setSenha(clientenovo.getSenha());
+				result = "found";
 				break;
 				
 			}
 			
 		}
-				
+		return result;	
 	}	
 
 }

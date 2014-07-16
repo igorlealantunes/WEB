@@ -56,7 +56,8 @@ public class DAOAdministrador implements IDAO<Administrador>{
 		
 	}
 	
-	public void alterar(String nome, Administrador admnovo){
+	public String alterar(String nome, Administrador admnovo){
+		String result = "notFound";
 		
 		for(Administrador a : adms) {
 			
@@ -64,11 +65,13 @@ public class DAOAdministrador implements IDAO<Administrador>{
 				
 				a.setUsuario(admnovo.getUsuario());
 				a.setSenha(admnovo.getSenha());
+				result = "found";
 				break;
 				
 			}
 			
 		}
+		return result;
 				
 	}	
 

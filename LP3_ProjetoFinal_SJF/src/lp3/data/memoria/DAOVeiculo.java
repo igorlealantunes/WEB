@@ -65,8 +65,8 @@ public class DAOVeiculo implements IDAO<Veiculo> {
 		
 	}
 	
-	public void alterar(String placaantigo, Veiculo novoveiculo) {
-		
+	public String alterar(String placaantigo, Veiculo novoveiculo) {
+		String result = "notFound";
 		for(Veiculo v : veiculos) {
 	
 			if(v.getPlaca().equals(placaantigo)) {
@@ -76,12 +76,12 @@ public class DAOVeiculo implements IDAO<Veiculo> {
 				v.setMarca(novoveiculo.getMarca());
 				v.setModelo(novoveiculo.getModelo());
 				v.setTipo(novoveiculo.getTipo());
-				
+				result = "found";
 				break;
 				
-			}
-			
+			}			
 		}
+		return result;
 	}
 
 }

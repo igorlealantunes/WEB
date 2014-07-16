@@ -2,6 +2,9 @@ package lp3.controller;
 
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+
 import lp3.data.memoria.DAOFuncionario;
 import lp3.data.memoria.DAOUsuario;
 import lp3.model.Funcionario;
@@ -43,11 +46,22 @@ public class FuncionarioController {
 		DAOFuncionario.inserir(funcionario);
 		return "";
 	}
-	
-	public String delFuncionario() {
-		
+	public String delFuncionario() {		
 		DAOFuncionario.remover(nome);
-		return "";
+		return "";		
+	}
+	public String alteraFuncionario() {		
+		String result = DAOFuncionario.alterar(nome, funcionario);
 		
+		String message = "Employer "+nome+" changed successfully!";
+		
+		if(result.endsWith("notFound")) {
+			message = "Employer not found";		
+		}
+		
+		FacesContext.getCurrentInstance().addMessage(null, 
+			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+		
+		return result;	
 	}
 }

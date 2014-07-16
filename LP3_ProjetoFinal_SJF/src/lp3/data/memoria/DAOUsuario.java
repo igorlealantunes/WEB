@@ -66,19 +66,20 @@ public class DAOUsuario implements IDAO<Usuario>{
 		
 	}
 	
-	public void alterar(String nomeantigo, Usuario usuario) {
-		
+	public String alterar(String nomeantigo, Usuario usuario) {
+		String result = "notFound";
 		for(Usuario u: usuarios) {
 			
 			if(u.getNome().equals(nomeantigo)) { 
 				u.setNome(usuario.getNome());
 				u.setSexo(usuario.getSexo());
 				u.setNacionalidade(usuario.getNacionalidade());
+				result = "found";
 				break;
 			}
 			
-		}
-		
+		}	
+		return result;
 	}
 
 }

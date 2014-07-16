@@ -2,6 +2,9 @@ package lp3.controller;
 
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+
 import lp3.data.memoria.DAOVeiculo;
 import lp3.model.Veiculo;
 
@@ -43,11 +46,24 @@ public class VeiculoController {
 		return "";
 	}
 	
-	public String delVeiculo() {
-		
+	public String delVeiculo() {	
 		DAOVeiculo.remover(placa);
 		return "";
+	}
+	
+	public String alteraVeiculo() {		
+		String result = DAOVeiculo.alterar(placa, veiculo);
 		
+		String message = "Vehicle "+placa+" changed successfully!";
+		
+		if(result.endsWith("notFound")) {
+			message = "User not found";		
+		}
+		
+		FacesContext.getCurrentInstance().addMessage(null, 
+			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+		
+		return result;	
 	}
 	
 }

@@ -2,6 +2,9 @@ package lp3.controller;
 
 import java.util.List;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
+
 import lp3.data.memoria.DAOUsuario;
 import lp3.model.Usuario;
 
@@ -40,13 +43,24 @@ public class UsuarioController {
 	public String addUsuario() {
 		DAOUsuario.inserir(usuario);
 		return "";
-	}
-	
-	public String delUsuario() {
-		
+	}	
+	public String delUsuario() {		
 		DAOUsuario.remover(nome);
-		return "";
+		return "";	
+	}
+	public String alteraUsuario() {
+			
+		String result = DAOUsuario.alterar(nome, usuario);		
+		String message = "User "+nome+" changed successfully!";
 		
+		if(result.endsWith("notFound")) {
+			message = "User not found";		
+		}
+		
+		FacesContext.getCurrentInstance().addMessage(null, 
+			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+		
+		return result;	
 	}
 	
 }
