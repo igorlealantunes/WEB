@@ -9,9 +9,9 @@
     <body>
         <f:view>
             <h:form>
-                 UserID: <h:inputText value="#{ cliente.usuario }"/>
-                <br/>Password: <h:inputText value="#{ cliente.senha }"/>
-                <br/><h:commandButton value="Login" action="#{ cliente.login }"/>
+                 UserID: <h:inputText value="#{loginController.login}"/>
+                <br/>Password: <h:inputText value="#{loginController.senha}"/>
+                <br/><h:commandButton value="Login" action="#{loginController.verificaLogin}"/>
             </h:form>
         </f:view>
     </body>
