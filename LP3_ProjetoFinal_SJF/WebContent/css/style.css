@@ -20,7 +20,7 @@ body { background: #FFFFFF; }
 
 /**CSS MENU**/
 
-#conteudo-menu { width: 700px; margin: auto; }
+#conteudo-menu { width: 700px; margin: auto;  }
 
 	#topo-menu { width: 700px; height: 40px; background: #000080; }
 
@@ -46,4 +46,5 @@ body { background: #FFFFFF; }
 
 			#logout { width: 60px; height: 30px; margin: 4px 20px; }
 
-		#interacao-menu { width: 700px; background: #cecece; }
+		#interacao-menu { width: 700px; background: #cecece; margin:auto; }
+		table { width: 700px; text-align: center; }

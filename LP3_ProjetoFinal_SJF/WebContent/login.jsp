@@ -20,9 +20,20 @@
 			
 		        <f:view>
 		            <h:form>
-		                 UserID: <h:inputText value="#{loginController.login}" required="true" id="login"/>
-		                <br/>Password: <h:inputSecret value="#{loginController.senha}" required="true" id="password"/>
-		                <br/><h:commandButton value="Login" action="#{loginController.verificaLogin}"/>
+		            	<table>
+		            		<tr>
+		            			<td>UserID: </td>
+			            		<td><h:inputText value="#{loginController.login}" required="true"/></td>
+		            		</tr>
+		            		<tr>
+		            			<td>Password: </td>
+		            			<td><h:inputSecret value="#{loginController.senha}" required="true"/></td>
+		            		</tr>
+		                	<tr>
+		                		<td colspan="2"><h:commandButton value="Login" action="#{loginController.verificaLogin}"/></td>
+		                	</tr>
+		            	</table>
+		                
 		            </h:form>
 		        </f:view>
 		        
