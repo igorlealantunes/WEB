@@ -10,6 +10,7 @@ public class UsuarioController {
 	private List<Usuario> listUsuarios;
 	private DAOUsuario DAOUsuario;
 	private Usuario usuario;
+	private String nome;
 	
 	public UsuarioController() {
 		DAOUsuario = new DAOUsuario();
@@ -24,6 +25,14 @@ public class UsuarioController {
 		this.usuario = usuario;
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	public List<Usuario> getListUsuarios() {
 		listUsuarios = DAOUsuario.getList();
 		return listUsuarios;
@@ -33,5 +42,11 @@ public class UsuarioController {
 		return "";
 	}
 	
+	public String delUsuario() {
+		
+		DAOUsuario.remover(nome);
+		return "";
+		
+	}
 	
 }
