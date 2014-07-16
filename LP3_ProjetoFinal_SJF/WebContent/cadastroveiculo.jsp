@@ -49,8 +49,8 @@
 				<li>Listar
 					<ul>	
 						<a href="listarusuarios.jsp"> <li> Listagem Usuários </li> </a>
-						<a href="listaroveiculo.jsp"> <li> Listagem de Veículos </li> </a>
-						<a href="listarfuncionario.jsp"> <li> Listagem de Funcionários </li> </a>
+						<a href="listarveiculos.jsp"> <li> Listagem de Veículos </li> </a>
+						<a href="listarfuncionarios.jsp"> <li> Listagem de Funcionários </li> </a>
 												
 					</ul>
 				</li>
@@ -64,15 +64,15 @@
 		<table>
 		<tr>
 			<td>Marca: </td> 
-			<td><h:inputText required="true"></h:inputText> </td>
+			<td><h:inputText value="#{veiculoController.veiculo.marca}" required="true"></h:inputText> </td>
 		</tr>
 		<tr>
 			<td>Modelo: </td>
-			<td><h:inputText required="true"></h:inputText> </td>
+			<td><h:inputText value="#{veiculoController.veiculo.modelo}" required="true"></h:inputText> </td>
 		</tr>
 		<tr>
 			<td>Ano: </td>
-			<td><h:inputText required="true"></h:inputText></td>
+			<td><h:inputText value="#{veiculoController.veiculo.ano}" required="true"></h:inputText></td>
 		</tr>
 		<tr>
 			<td>Placa: </td>
@@ -80,14 +80,14 @@
 		</tr>
 		<tr>
 			<td colspan="2">
-				<h:selectOneMenu>
+				<h:selectOneMenu value="#{veiculoController.veiculo.tipo }">
 					<f:selectItem itemValue="Carro" itemLabel="Carro"/>
 					<f:selectItem itemValue="Moto" itemLabel="Moto"/>
 				</h:selectOneMenu> 
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2"> <h:commandButton value="Cadastrar" ></h:commandButton>
+			<td colspan="2"> <h:commandButton value="Cadastrar" action="#{veiculoController.addVeiculo}" ></h:commandButton>
 		</tr>
 		</table>
 	</h:form>
