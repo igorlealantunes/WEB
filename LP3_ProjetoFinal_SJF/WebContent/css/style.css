@@ -53,3 +53,5 @@ body { background: #FFFFFF; }
 		#listar tr { transition:background-color 0.6s; }
 		
 		#listar tr:HOVER { background-color: white; }
+
+#interacao-menu h6 { visibility: hidden; }

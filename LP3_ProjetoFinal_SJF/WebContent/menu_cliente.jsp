@@ -6,6 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<script language="javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script language="javascript" src="js/menu_cliente.js"></script>
 <title>Insert title here</title>
 </head>
 	<body>
@@ -23,25 +25,25 @@
 			<ul>
 				<li>Cadastrar
 					<ul>	
-						<li> Cadastro de Usuários </li>
-						<li> Cadastro de Veículos </li>
-						<li> Cadastro de Funcionários </li>
+						<li class="restrito"> Cadastro de Usuários </li>
+						<li class="restrito"> Cadastro de Veículos </li>
+						<li class="restrito"> Cadastro de Funcionários </li>
 						
 					</ul>
 				</li>
-				<li>Editar
+				<li id="restrito">Editar
 					<ul>	
-						<li> Alteração de Usuários </li>  
-						<li> Alteração de Veículos </li>  
-						<li> Alteração de Funcionários </li>
+						<li class="restrito"> Alteração de Usuários </li>  
+						<li class="restrito"> Alteração de Veículos </li>  
+						<li class="restrito"> Alteração de Funcionários </li>
 						
 					</ul>
 				</li>
-				<li>Remover
+				<li id="restrito">Remover
 					<ul>	
-						<li> Remoção de Usuários </li> 
-						<li> Remoção de Veículos </li>
-						<li> Remoção de Funcionários </li>
+						<li class="restrito"> Remoção de Usuários </li> 
+						<li class="restrito"> Remoção de Veículos </li>
+						<li class="restrito"> Remoção de Funcionários </li>
 						
 					</ul>
 				</li>
@@ -56,8 +58,7 @@
 				</li>
 			</ul>
 		</div>		
-		<div id="interacao-menu">
-		</div>
+	
 	</div>
 	
 	</f:view>
