@@ -15,7 +15,7 @@ public class FuncionarioController {
 	
 	public FuncionarioController() {
 		DAOFuncionario = new DAOFuncionario();
-		funcionario = new Funcionario();
+		funcionario = new Funcionario();	
 	}
 	
 	public Funcionario getFuncionario() {

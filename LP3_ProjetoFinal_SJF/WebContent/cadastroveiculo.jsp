@@ -76,7 +76,7 @@
 		</tr>
 		<tr>
 			<td>Placa: </td>
-			<td><h:inputText required="true"></h:inputText> </td>
+			<td><h:inputText  value="#{veiculoController.veiculo.placa}" required="true"></h:inputText> </td>
 		</tr>
 		<tr>
 			<td colspan="2">
