@@ -63,7 +63,7 @@
 	<h:form>
 		<table>
 			<tr>
-				<td>Nome: </td> <td> <h:inputText required="true"></h:inputText></td>
+				<td>Nome: </td> <td> <h:inputText required="true" value="#{funcionarioController.funcionario.nome}"></h:inputText></td>
 			</tr>
 			<tr>
 				<td>Salário: </td> <td> <h:inputText required="true"></h:inputText> </td> 
