@@ -82,6 +82,7 @@
 	        </f:facet>
 	        <h:outputText value="#{funcionarios.salario}" />
 	    </h:column>
+	      
 	    
 	    
 	</h:dataTable>
