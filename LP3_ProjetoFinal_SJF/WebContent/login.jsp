@@ -8,15 +8,15 @@
         <title>Login</title>
     </head>
     <body>
-	    <section id="conteudo-login">
+	    <div id="conteudo-login">
 	    	
-	    	<section id="topo-login">
+	    	<div id="topo-login">
 		
 				<p>Projeto LP3 - Parte 2</p>
 				
-			</section>
+			</div>
 			
-			<section id="form">
+			<div id="form">
 			
 		        <f:view>
 		            <h:form>
@@ -26,8 +26,8 @@
 		            </h:form>
 		        </f:view>
 		        
-	        </section>
+	        </div>
 	        
-	    </section>
+	    </div>
     </body>
 </html>
