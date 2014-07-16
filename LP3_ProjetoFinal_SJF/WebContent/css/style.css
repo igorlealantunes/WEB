@@ -1,0 +1,49 @@
+body { background: #FFFFFF; }
+
+/**CSS LOGIN**/
+
+#conteudo-login { position:absolute; top:50%; margin-top:-90px; left:50%; margin-left:-150px; }
+
+#topo-login { width: 300px; height: 40px; background: #000080; margin: auto; }
+
+	#topo-login p { font-size: 30px; color: #FFFFFF; text-align: center; }
+
+#form { width: 300px; height: 140px; background: #cecece; margin: auto; }
+
+	#form-login { padding: 10 10; }
+
+	#login { width: 280px; }
+
+	#password { width: 280px; }
+
+	#bentrar { float: right; }
+
+/**CSS MENU**/
+
+#conteudo-menu { width: 700px; margin: auto; }
+
+	#topo-menu { width: 700px; height: 40px; background: #000080; }
+
+		#topo-menu p { font-size: 30px; color: #FFFFFF; text-align: center; }
+
+		#menu { width: 700px; height: 38px; background: #FFFFFF; }
+
+			#menu ul { list-style: none; }
+
+				#menu ul li { width: 100px; float: left; position: relative; font: bold 12px/18px sans-serif; color: #000000; display: block; padding: 10px 20px; background: #FFFFFF; text-decoration: none; }
+
+					#menu ul li:hover { background: #000080; color: #FFFFFF; }
+
+					#menu ul li ul { width: 200px; margin: 0; display: none; position: absolute; top: 38px; left: -40px; opacity: 0; visibility: hidden; }
+
+						#menu ul li ul li { width: 200px; margin: 0; background: #000080; display: block; color: #FFFFFF; text-align: left; }
+						
+							#menu ul li ul li a { text-decoration: none; color: white; }
+
+							#menu ul li ul li:hover { background: #FFFFFF; color: #000000; }
+
+					#menu ul li:hover ul { display: block; opacity: 1; visibility: visible; }
+
+			#logout { width: 60px; height: 30px; margin: 4px 20px; }
+
+		#interacao-menu { width: 700px; background: #cecece; }
