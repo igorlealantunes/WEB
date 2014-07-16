@@ -3,17 +3,17 @@ package lp3.data.memoria;
 import java.util.List;
 import java.util.Vector;
 
-import lp3.data.IDAOUsuario;
+import lp3.data.IDAO;
 import lp3.model.Usuario;
 
-public class DAOUsuario implements IDAOUsuario{
+public class DAOUsuario implements IDAO{
 	
-	private List<Usuario> usuarios;
+	private List<Object> usuarios;
 	private int id;
 	
 	public DAOUsuario() {
 		
-		this.usuarios = new Vector<Usuario>();
+		this.usuarios = new Vector<Object>();
 		this.id = 1;
 		
 		Usuario user1 = new Usuario("Usuario A", "Masculino", "Brasileiro");
@@ -35,14 +35,15 @@ public class DAOUsuario implements IDAOUsuario{
 		
 	}
 	
-	public List<Usuario> listarUsuarios(){
+	public List<Object> getList(){
 		
 		return this.usuarios;
 		
 	}
 	
-	public boolean inserirUsuario(Usuario usuario) {
+	public boolean inserir(Object objeto) {
 		
+		Usuario usuario = (Usuario) objeto;
 		usuario.setId(id++);
 		boolean resultado =  usuarios.add(usuario);
 		
@@ -50,11 +51,13 @@ public class DAOUsuario implements IDAOUsuario{
 		
 	}
 	
-	public boolean removerUsuario(String nome) {
+	public boolean remover(String nome) {
 		
 		boolean resultado = false;
 		
-		for(Usuario u: usuarios) {
+		for(Object user: usuarios) {
+			
+			Usuario u = (Usuario) user;
 			
 			if(u.getNome().equals(nome)) { 
 				resultado = usuarios.remove(u);
@@ -66,14 +69,18 @@ public class DAOUsuario implements IDAOUsuario{
 		
 	}
 	
-	public void alterarUsuario(String nomeantigo, Usuario usuarionovo) {
+	public void alterar(String nomeantigo, Object objeto) {
 		
-		for(Usuario u: usuarios) {
+		Usuario usuario = (Usuario) objeto;
+		
+		for(Object user: usuarios) {
+			
+			Usuario u = (Usuario) user;
 			
 			if(u.getNome().equals(nomeantigo)) { 
-				u.setNome(usuarionovo.getNome());
-				u.setSexo(usuarionovo.getSexo());
-				u.setNacionalidade(usuarionovo.getNacionalidade());
+				u.setNome(usuario.getNome());
+				u.setSexo(usuario.getSexo());
+				u.setNacionalidade(usuario.getNacionalidade());
 				break;
 			}
 			
