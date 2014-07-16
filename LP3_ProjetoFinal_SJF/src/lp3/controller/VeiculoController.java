@@ -14,6 +14,7 @@ public class VeiculoController {
 	
 	public VeiculoController() {
 		DAOVeiculo = new DAOVeiculo();
+		veiculo = new Veiculo();
 	}
 	
 	public List<Veiculo> getListVeiculos() {
