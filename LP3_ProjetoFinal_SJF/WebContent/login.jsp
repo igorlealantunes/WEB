@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="form">
-			
+			<>
 		        <f:view>
 		            <h:form>
 		                 UserID: <h:inputText value="#{loginController.login}" required="true" id="login"/>

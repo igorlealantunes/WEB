@@ -48,7 +48,7 @@
 				
 				<li>Listar
 					<ul>	
-						<a href="listarusuario.jsp"> <li> Listagem Usuários </li> </a>
+						<a href="listarusuarios.jsp"> <li> Listagem Usuários </li> </a>
 						<a href="listaroveiculo.jsp"> <li> Listagem de Veículos </li> </a>
 						<a href="listarfuncionario.jsp"> <li> Listagem de Funcionários </li> </a>
 												

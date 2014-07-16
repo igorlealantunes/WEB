@@ -43,8 +43,6 @@ public class LoginController {
 		this.senha = senha;
 	}
 
-	
-	
 	public String verificaLogin() {
 		
 		for (Object cli : listClientes) {

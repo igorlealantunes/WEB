@@ -16,9 +16,9 @@ public class UsuarioController {
 	}
 	
 	public List<Usuario> getListUsuarios() {
-		listUsuarios = (List<Usuario>) DAOUsuario.getList();
-		
+		listUsuarios = DAOUsuario.getList();
 		return listUsuarios;
 	}
+	
 	
 }

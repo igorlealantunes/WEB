@@ -35,6 +35,21 @@
 		<managed-bean-class>lp3.controller.LoginController</managed-bean-class>
 		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>usuarioController</managed-bean-name>
+		<managed-bean-class>lp3.controller.UsuarioController</managed-bean-class>
+		<managed-bean-scope>application</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>veiculoController</managed-bean-name>
+		<managed-bean-class>lp3.controller.VeiculoController</managed-bean-class>
+		<managed-bean-scope>application</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>funcionarioController</managed-bean-name>
+		<managed-bean-class>lp3.controller.FuncionarioController</managed-bean-class>
+		<managed-bean-scope>application</managed-bean-scope>
+	</managed-bean>
 	<navigation-rule>
 		<display-name>login</display-name>
 		<from-view-id>/login.jsp</from-view-id>

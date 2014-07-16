@@ -60,10 +60,36 @@
 		
 <div id="interacao-menu">
 
-	<h:dataTable value="#{usuarioController.listUsuarios}" var="usuarios">
-    <h:column>
-    <h:outputLabel value="#{usuarios.nome}" ></h:outputLabel>
-    </h:column>  
+	
+	<h:dataTable value="#{veiculoController.listVeiculos}" var="veiculos" border="1">
+		<h:column>
+	        <f:facet name="header">
+	            <h:outputText value="Modelo" />
+	        </f:facet>
+	        <h:outputText value="#{veiculos.modelo}" />
+	    </h:column>
+	    
+	    <h:column>
+	        <f:facet name="header">
+	            <h:outputText value="Marca" />
+	        </f:facet>
+	        <h:outputText value="#{veiculos.marca}" />
+	    </h:column>
+	    
+	     <h:column>
+	        <f:facet name="header">
+	            <h:outputText value="Ano" />
+	        </f:facet>
+	        <h:outputText value="#{veiculos.ano}" />
+	    </h:column>
+	    
+	    <h:column>
+	        <f:facet name="header">
+	            <h:outputText value="Placa" />
+	        </f:facet>
+	        <h:outputText value="#{veiculos.placa}" />
+	    </h:column>
+	    
 	</h:dataTable>
 
 </div>
