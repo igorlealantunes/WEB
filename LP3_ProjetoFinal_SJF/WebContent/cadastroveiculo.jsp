@@ -63,19 +63,31 @@
 	<h:form>
 		<table>
 		<tr>
-			<td>Marca: <h:inputText required="true"></h:inputText> </td>
-			<td>Modelo: <h:inputText required="true"></h:inputText> </td>
+			<td>Marca: </td> 
+			<td><h:inputText required="true"></h:inputText> </td>
 		</tr>
 		<tr>
-			<td>Ano: <h:inputText required="true"></h:inputText></td>
-			<td><h:selectOneMenu>
-				<f:selectItem itemValue="Carro" itemLabel="Carro"/>
-				<f:selectItem itemValue="Moto" itemLabel="Moto"/>
-			</h:selectOneMenu> </td>
+			<td>Modelo: </td>
+			<td><h:inputText required="true"></h:inputText> </td>
 		</tr>
 		<tr>
-			<td>Placa: <h:inputText required="true"></h:inputText> </td>
-			<td> <h:commandButton value="Cadastrar" ></h:commandButton>
+			<td>Ano: </td>
+			<td><h:inputText required="true"></h:inputText></td>
+		</tr>
+		<tr>
+			<td>Placa: </td>
+			<td><h:inputText required="true"></h:inputText> </td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<h:selectOneMenu>
+					<f:selectItem itemValue="Carro" itemLabel="Carro"/>
+					<f:selectItem itemValue="Moto" itemLabel="Moto"/>
+				</h:selectOneMenu> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"> <h:commandButton value="Cadastrar" ></h:commandButton>
 		</tr>
 		</table>
 	</h:form>
