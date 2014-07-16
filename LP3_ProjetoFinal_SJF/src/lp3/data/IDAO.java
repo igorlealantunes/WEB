@@ -2,11 +2,11 @@ package lp3.data;
 
 import java.util.List;
 
-public interface IDAO {
+public interface IDAO <T> {
 	
-	public List<Object> getList();
-	public boolean inserir(Object objeto);
+	public List<T> getList();
+	public boolean inserir(T objeto);
 	public boolean remover(String nome);
-	public void alterar(String nome, Object objeto);
+	public void alterar(String nome, T objeto);
 
 }

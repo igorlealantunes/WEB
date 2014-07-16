@@ -6,13 +6,13 @@ import java.util.Vector;
 import lp3.data.IDAO;
 import lp3.model.Cliente;
 
-public class DAOCliente implements IDAO{
+public class DAOCliente implements IDAO<Cliente>{
 	
-	private List<Object> clientes;
+	private List<Cliente> clientes;
 	
 	public DAOCliente() {
 		
-		this.clientes = new Vector<Object>();
+		this.clientes = new Vector<Cliente>();
 		
 		Cliente cli1 = new Cliente("cliente1", "111");
 		Cliente cli2 = new Cliente("cliente2", "222");
@@ -26,15 +26,13 @@ public class DAOCliente implements IDAO{
 		
 	}
 	
-	public List<Object> getList(){
+	public List<Cliente> getList(){
 		
 		return this.clientes;
 		
 	}
 	
-	public boolean inserir(Object objeto) {
-		
-		Cliente cliente = (Cliente) objeto;
+	public boolean inserir(Cliente cliente) {
 		
 		boolean resultado = clientes.add(cliente);
 		return resultado;
@@ -45,9 +43,7 @@ public class DAOCliente implements IDAO{
 		
 		boolean resultado = false;
 		
-		for(Object cli : clientes) {
-			
-			Cliente c = (Cliente) cli;
+		for(Cliente c : clientes) {
 			
 			if(c.getUsuario().equals(nome)) { 
 				resultado = clientes.remove(c);
@@ -60,14 +56,10 @@ public class DAOCliente implements IDAO{
 		
 	}
 	
-	public void alterar(String nome, Object objeto){
+	public void alterar(String nome, Cliente clientenovo){
 		
-		Cliente clientenovo = (Cliente) objeto;
-		
-		for(Object cli : clientes) {
-			
-			Cliente c = (Cliente) cli;
-			
+		for(Cliente c : clientes) {
+
 			if(c.getUsuario().equalsIgnoreCase(nome))  {
 				
 				c.setUsuario(clientenovo.getUsuario());

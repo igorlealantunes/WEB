@@ -6,14 +6,14 @@ import java.util.Vector;
 import lp3.data.IDAO;
 import lp3.model.Funcionario;
 
-public class DAOFuncionario implements IDAO{
+public class DAOFuncionario implements IDAO<Funcionario>{
 	
-	private List<Object> funcionarios;
+	private List<Funcionario> funcionarios;
 	private int id;
 	
 	public DAOFuncionario() {
 		
-		this.funcionarios = new Vector<Object>();
+		this.funcionarios = new Vector<Funcionario>();
 		this.id = 1;
 		
 		Funcionario func1 = new Funcionario("Funcionario A", 1000,"Mecanico");
@@ -32,15 +32,14 @@ public class DAOFuncionario implements IDAO{
 		
 	}
 	
-	public List<Object> getList(){
+	public List<Funcionario> getList(){
 		
 		return this.funcionarios;
 		
 	}
 	
-	public boolean inserir(Object objeto) {
+	public boolean inserir(Funcionario funcionario) {
 		
-		Funcionario funcionario = (Funcionario) objeto;
 		funcionario.setId(id++);
 		boolean resultado =  funcionarios.add(funcionario);
 		
@@ -52,10 +51,8 @@ public class DAOFuncionario implements IDAO{
 		
 		boolean resultado = false;
 		
-		for(Object func: funcionarios) {
-			
-			Funcionario f = (Funcionario) func;
-			
+		for(Funcionario f: funcionarios) {		
+		
 			if(f.getNome().equals(nome)) { 
 				resultado = funcionarios.remove(f);
 				break;
@@ -66,13 +63,11 @@ public class DAOFuncionario implements IDAO{
 		
 	}
 	
-	public void alterar(String nomeantigo, Object objeto) {
+	public void alterar(String nomeantigo, Funcionario funcionarionovo) {
 		
-		Funcionario funcionarionovo = (Funcionario) objeto;
-		
-		for(Object func: funcionarios) {
+
+		for(Funcionario f: funcionarios) {
 			
-			Funcionario f = (Funcionario) func;
 			
 			if(f.getNome().equals(nomeantigo)) { 
 				f.setNome(funcionarionovo.getNome());

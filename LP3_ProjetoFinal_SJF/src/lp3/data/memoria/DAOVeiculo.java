@@ -6,14 +6,14 @@ import java.util.Vector;
 import lp3.data.IDAO;
 import lp3.model.Veiculo;
 
-public class DAOVeiculo implements IDAO {
+public class DAOVeiculo implements IDAO<Veiculo> {
 	
-	private List<Object> veiculos;
+	private List<Veiculo> veiculos;
 	private int id;
 	
 	public DAOVeiculo() {
 		
-		this.veiculos = new Vector<Object>();
+		this.veiculos = new Vector<Veiculo>();
 		this.id = 1;
 		
 		Veiculo veiculo1 = new Veiculo("Gol", "VW", "carro", 2000, "XXX-9090");
@@ -29,16 +29,15 @@ public class DAOVeiculo implements IDAO {
 		
 	}
 	
-	public List<Object> getList() {
+	public List<Veiculo> getList() {
 		
 		return this.veiculos;
 		
 	}
 	
-	public boolean inserir(Object o) {
+	public boolean inserir(Veiculo veiculo) {
 		
-		Veiculo veiculo = (Veiculo) o;
-		
+	
 		veiculo.setId(id++);
 		boolean resultado = veiculos.add(veiculo);
 		
@@ -50,9 +49,8 @@ public class DAOVeiculo implements IDAO {
 		
 		boolean resultado = false;
 		
-		for(Object vei : veiculos) {
-			
-			Veiculo v = (Veiculo) vei;
+		for(Veiculo v : veiculos) {
+		
 			
 			if(v.getPlaca().equals(placa)) {
 				
@@ -67,14 +65,10 @@ public class DAOVeiculo implements IDAO {
 		
 	}
 	
-	public void alterar(String placaantigo, Object objeto) {
+	public void alterar(String placaantigo, Veiculo novoveiculo) {
 		
-		Veiculo novoveiculo = (Veiculo) objeto;
-		
-		for(Object vei : veiculos) {
-			
-			Veiculo v = (Veiculo) vei;
-			
+		for(Veiculo v : veiculos) {
+	
 			if(v.getPlaca().equals(placaantigo)) {
 				
 				v.setPlaca(novoveiculo.getPlaca());

@@ -13,8 +13,8 @@ import lp3.model.Cliente;
 
 public class LoginController {
 
-	private List<Object> listClientes;
-	private List<Object> listAdministradores;
+	private List<Cliente> listClientes;
+	private List<Administrador> listAdministradores;
 
 	
 	private String login;

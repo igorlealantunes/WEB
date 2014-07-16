@@ -6,14 +6,14 @@ import java.util.Vector;
 import lp3.data.IDAO;
 import lp3.model.Usuario;
 
-public class DAOUsuario implements IDAO{
+public class DAOUsuario implements IDAO<Usuario>{
 	
-	private List<Object> usuarios;
+	private List<Usuario> usuarios;
 	private int id;
 	
 	public DAOUsuario() {
 		
-		this.usuarios = new Vector<Object>();
+		this.usuarios = new Vector<Usuario>();
 		this.id = 1;
 		
 		Usuario user1 = new Usuario("Usuario A", "Masculino", "Brasileiro");
@@ -35,15 +35,14 @@ public class DAOUsuario implements IDAO{
 		
 	}
 	
-	public List<Object> getList(){
+	public List<Usuario> getList(){
 		
 		return this.usuarios;
 		
 	}
 	
-	public boolean inserir(Object objeto) {
+	public boolean inserir(Usuario usuario) {
 		
-		Usuario usuario = (Usuario) objeto;
 		usuario.setId(id++);
 		boolean resultado =  usuarios.add(usuario);
 		
@@ -55,10 +54,8 @@ public class DAOUsuario implements IDAO{
 		
 		boolean resultado = false;
 		
-		for(Object user: usuarios) {
-			
-			Usuario u = (Usuario) user;
-			
+		for(Usuario u: usuarios) {
+		
 			if(u.getNome().equals(nome)) { 
 				resultado = usuarios.remove(u);
 				break;
@@ -69,13 +66,9 @@ public class DAOUsuario implements IDAO{
 		
 	}
 	
-	public void alterar(String nomeantigo, Object objeto) {
+	public void alterar(String nomeantigo, Usuario usuario) {
 		
-		Usuario usuario = (Usuario) objeto;
-		
-		for(Object user: usuarios) {
-			
-			Usuario u = (Usuario) user;
+		for(Usuario u: usuarios) {
 			
 			if(u.getNome().equals(nomeantigo)) { 
 				u.setNome(usuario.getNome());

@@ -6,13 +6,13 @@ import java.util.Vector;
 import lp3.data.IDAO;
 import lp3.model.Administrador;;
 
-public class DAOAdministrador implements IDAO{
+public class DAOAdministrador implements IDAO<Administrador>{
 	
-	private List<Object> adms;
+	private List<Administrador> adms;
 	
 	public DAOAdministrador() {
 		
-		this.adms = new Vector<Object>();
+		this.adms = new Vector<Administrador>();
 		
 		Administrador adm1 = new Administrador("adm1", "111");
 		Administrador adm2 = new Administrador("adm2", "222");
@@ -26,16 +26,14 @@ public class DAOAdministrador implements IDAO{
 		
 	}
 	
-	public List<Object> getList(){
+	public List<Administrador> getList(){
 		
 		return this.adms;
 		
 	}
 	
-	public boolean inserir(Object objeto) {
-		
-		Administrador adm = (Administrador) objeto;
-		
+	public boolean inserir(Administrador adm) {
+				
 		boolean resultado = adms.add(adm);
 		return resultado;
 		
@@ -45,9 +43,7 @@ public class DAOAdministrador implements IDAO{
 		
 		boolean resultado = false;
 		
-		for(Object adm : adms) {
-			
-			Administrador a = (Administrador) adm;
+		for(Administrador a : adms) {
 			
 			if(a.getUsuario().equals(nome)) { 
 				resultado = adms.remove(a);
@@ -60,13 +56,9 @@ public class DAOAdministrador implements IDAO{
 		
 	}
 	
-	public void alterar(String nome, Object objeto){
+	public void alterar(String nome, Administrador admnovo){
 		
-		Administrador admnovo = (Administrador) objeto;
-		
-		for(Object adm : adms) {
-			
-			Administrador a = (Administrador) adm;
+		for(Administrador a : adms) {
 			
 			if(a.getUsuario().equalsIgnoreCase(nome))  {
 				
