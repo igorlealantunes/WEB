@@ -45,7 +45,17 @@ public class UsuarioController {
 		return "";
 	}	
 	public String delUsuario() {		
-		DAOUsuario.remover(nome);
+		boolean result = DAOUsuario.remover(nome);
+		
+		String message = "User "+nome+" deleted successfully!";
+		
+		if(result == false) {
+			message = "User not found";		
+		}
+		
+		FacesContext.getCurrentInstance().addMessage(null, 
+			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+		
 		return "";	
 	}
 	public String alteraUsuario() {

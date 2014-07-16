@@ -1,8 +1,10 @@
 package lp3.controller;
 
 import java.util.LinkedList;
-
 import java.util.List;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import lp3.data.memoria.DAOCliente;
@@ -59,7 +61,9 @@ public class LoginController {
 			}
 		}
 		
-		throw new NotImplementedException();
+		FacesContext.getCurrentInstance().addMessage(null, 
+			       new FacesMessage(FacesMessage.SEVERITY_INFO, "Username or password incorrect", null));
+		return "login incorrect";
 	}
 	
 	

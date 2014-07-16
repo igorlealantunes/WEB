@@ -47,7 +47,16 @@ public class VeiculoController {
 	}
 	
 	public String delVeiculo() {	
-		DAOVeiculo.remover(placa);
+		boolean result = DAOVeiculo.remover(placa);
+		
+		String message = "Vehicle "+placa+" deleted successfully!";
+		
+		if(result == false) {
+			message = "User not found";		
+		}
+		
+		FacesContext.getCurrentInstance().addMessage(null, 
+			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
 		return "";
 	}
 	

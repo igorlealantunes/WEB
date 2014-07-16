@@ -47,7 +47,16 @@ public class FuncionarioController {
 		return "";
 	}
 	public String delFuncionario() {		
-		DAOFuncionario.remover(nome);
+		boolean result = DAOFuncionario.remover(nome);
+		
+		String message = "Employer "+nome+" deleted successfully!";
+		
+		if(result == false) {
+			message = "User not found";		
+		}
+		
+		FacesContext.getCurrentInstance().addMessage(null, 
+			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
 		return "";		
 	}
 	public String alteraFuncionario() {		

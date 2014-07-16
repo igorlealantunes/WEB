@@ -71,9 +71,9 @@
 			</tr>
 			<tr> 
 				<td colspan="2">
-					<h:selectOneMenu>
-						<f:selectItem itemValue="Masculino" itemLabel="Masculino" value="#{usuarioController.usuario.sexo}"/>
-						<f:selectItem itemValue="Feminino" itemLabel="Feminino" value="#{usuarioController.usuario.sexo}"/>
+					<h:selectOneMenu  value="#{usuarioController.usuario.sexo}">
+						<f:selectItem itemValue="Masculino" itemLabel="Masculino"/>
+						<f:selectItem itemValue="Feminino" itemLabel="Feminino"/>
 					</h:selectOneMenu> 
 				</td>
 			</tr>
