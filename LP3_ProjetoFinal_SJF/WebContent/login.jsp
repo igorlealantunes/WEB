@@ -17,7 +17,6 @@
 			</div>
 			
 			<div id="form">
-			<>
 		        <f:view>
 		            <h:form>
 		            	<table>

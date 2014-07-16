@@ -47,4 +47,9 @@ body { background: #FFFFFF; }
 			#logout { width: 60px; height: 30px; margin: 4px 20px; }
 
 		#interacao-menu { width: 700px; background: #cecece; margin:auto; }
-		table { width: 700px; text-align: center; }
+		
+		#listar { width: 700px; text-align: center; }
+		
+		#listar tr { transition:background-color 0.6s; }
+		
+		#listar tr:HOVER { background-color: white; }

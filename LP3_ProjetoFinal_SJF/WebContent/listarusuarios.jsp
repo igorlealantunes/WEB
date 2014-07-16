@@ -60,10 +60,25 @@
 		
 <div id="interacao-menu">
 
-	<h:dataTable value="#{usuarioController.listUsuarios}" var="usuarios">
-    <h:column>
-    <h:outputLabel value="#{usuarios.nome}" ></h:outputLabel>
-    </h:column>  
+	<h:dataTable id="listar" border="1" value="#{usuarioController.listUsuarios}" var="usuarios">
+    	<h:column>	
+	        <f:facet name="header">
+	            <h:outputText value="Nome" />
+	        </f:facet>
+	        <h:outputText value="#{usuarios.nome}" />
+	    </h:column>
+	    <h:column>	
+	        <f:facet name="header">
+	            <h:outputText value="Sexo" />
+	        </f:facet>
+	        <h:outputText value="#{usuarios.sexo}" />
+	    </h:column>
+	    <h:column>	
+	        <f:facet name="header">
+	            <h:outputText value="Nacionalidade" />
+	        </f:facet>
+	        <h:outputText value="#{usuarios.nacionalidade}" />
+	    </h:column>  
 	</h:dataTable>
 
 </div>

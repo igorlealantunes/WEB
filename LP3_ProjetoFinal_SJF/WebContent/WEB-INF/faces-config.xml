@@ -54,16 +54,24 @@
 		<display-name>login</display-name>
 		<from-view-id>/login.jsp</from-view-id>
 		<navigation-case>
-			<from-outcome>loginPass</from-outcome>
-			<to-view-id>/success.jsp</to-view-id>
+			<from-outcome>loginFail</from-outcome>
+			<to-view-id>/error.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<display-name>login</display-name>
 		<from-view-id>/login.jsp</from-view-id>
 		<navigation-case>
-			<from-outcome>loginFail</from-outcome>
-			<to-view-id>/error.jsp</to-view-id>
+			<from-outcome>TYPE_ADM</from-outcome>
+			<to-view-id>/menu.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>login</display-name>
+		<from-view-id>/login.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>TYPE_CLIENTE</from-outcome>
+			<to-view-id>/menu_cliente.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 
