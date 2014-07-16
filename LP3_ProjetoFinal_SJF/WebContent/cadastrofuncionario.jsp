@@ -49,8 +49,8 @@
 				<li>Listar
 					<ul>	
 						<a href="listarusuarios.jsp"> <li> Listagem Usuários </li> </a>
-						<a href="listaroveiculo.jsp"> <li> Listagem de Veículos </li> </a>
-						<a href="listarfuncionario.jsp"> <li> Listagem de Funcionários </li> </a>
+						<a href="listarveiculos.jsp"> <li> Listagem de Veículos </li> </a>
+						<a href="listarfuncionarios.jsp"> <li> Listagem de Funcionários </li> </a>
 												
 					</ul>
 				</li>
@@ -66,13 +66,13 @@
 				<td>Nome: </td> <td> <h:inputText required="true" value="#{funcionarioController.funcionario.nome}"></h:inputText></td>
 			</tr>
 			<tr>
-				<td>Salário: </td> <td> <h:inputText required="true"></h:inputText> </td> 
+				<td>Salário: </td> <td> <h:inputText value="#{funcionarioController.funcionario.salario}" required="true"></h:inputText> </td> 
 			</tr>
 			<tr>
-				<td>Função: </td> <td> <h:inputText required="true"></h:inputText></td>
+				<td>Função: </td> <td> <h:inputText value="#{funcionarioController.funcionario.funcao}" required="true"></h:inputText></td>
 			</tr>
 			<tr >
-				<td colspan="2"> <h:commandButton value="Cadastrar" action="#"/> </td>
+				<td colspan="2"> <h:commandButton value="Cadastrar" action="#{funcionarioController.addFuncionario}"/> </td>
 			</tr>
 		</table>
 	</h:form>

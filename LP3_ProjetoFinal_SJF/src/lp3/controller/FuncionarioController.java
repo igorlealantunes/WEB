@@ -3,7 +3,6 @@ package lp3.controller;
 import java.util.List;
 
 import lp3.data.memoria.DAOFuncionario;
-import lp3.data.memoria.DAOUsuario;
 import lp3.model.Funcionario;
 
 public class FuncionarioController {
@@ -26,7 +25,10 @@ public class FuncionarioController {
 
 	private DAOFuncionario DAOFuncionario;
 	
-	
+	public String addFuncionario() {
+		DAOFuncionario.inserir(funcionario);
+		return "";
+	}
 	
 	
 	public List<Funcionario> getListFuncionarios() {
