@@ -32,6 +32,8 @@
 		                		<td colspan="2"><h:commandButton value="Login" action="#{loginController.verificaLogin}"/></td>
 		                	</tr>
 		            	</table>
+		            	
+		            	<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 		                
 		            </h:form>
 		        </f:view>
