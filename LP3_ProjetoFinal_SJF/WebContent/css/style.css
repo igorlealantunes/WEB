@@ -50,4 +50,6 @@ body { background: #FFFFFF; }
 		
 		#listar { width: 700px; text-align: center; }
 		
+		#listar tr { transition:background-color 0.6s; }
+		
 		#listar tr:HOVER { background-color: white; }
