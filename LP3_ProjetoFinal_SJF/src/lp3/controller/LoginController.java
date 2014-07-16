@@ -15,26 +15,43 @@ public class LoginController {
 
 	private LinkedList<Cliente> listClientes;
 	private LinkedList<Administrador> listAdministradores;
+
 	
-	private static int TYPE_CLIENTE = 1;
-	private static int TYPE_ADM = 2;
+	private String login;
+	private String senha;
 	
+	public String getLogin() {
+		return login;
+	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
 	public LoginController() {		
 		listClientes 		= (LinkedList<Cliente>) (List) (new DAOCliente()).getList();
 		listAdministradores = (LinkedList<Administrador>) (List) (new DAOAdministrador()).getList();
 	}
 	
-	public int verificaLogin(String login, String password) {
+	public String verificaLogin() {
 		
 		for (Cliente c : listClientes) {
-			if(login.equals(c.getUsuario()) && password.equals(c.getSenha())) {
-				return TYPE_CLIENTE;
+			if(login.equals(c.getUsuario()) && senha.equals(c.getSenha())) {
+				return "TYPE_CLIENTE";
 			}
 		}
 		
 		for (Administrador a : listAdministradores) {
-			if(login.equals(a.getUsuario()) && password.equals(a.getSenha())) {
-				return TYPE_ADM;
+			if(login.equals(a.getUsuario()) && senha.equals(a.getSenha())) {
+				return "TYPE_ADM";
 			}
 		}
 		
