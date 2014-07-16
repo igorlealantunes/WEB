@@ -9,7 +9,7 @@ public class VeiculoController {
 
 	private List<Veiculo> listVeiculos;
 	private DAOVeiculo DAOVeiculo;
-	
+	private Veiculo veiculo;
 	
 	public VeiculoController() {
 		DAOVeiculo = new DAOVeiculo();
@@ -19,4 +19,18 @@ public class VeiculoController {
 		listVeiculos = DAOVeiculo.getList();
 		return listVeiculos;
 	}
+
+	public Veiculo getVeiculo() {
+		return veiculo;
+	}
+
+	public void setVeiculo(Veiculo veiculo) {
+		this.veiculo = veiculo;
+	}
+	
+	public String addFuncionario() {
+		DAOVeiculo.inserir(veiculo);
+		return "";
+	}
+	
 }
