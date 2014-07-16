@@ -62,17 +62,23 @@
 	<h:form>
 		<table>
 			<tr>
-			
-			<td>Nome: <h:inputText required="true"></h:inputText></td> 
-			<td><h:selectOneMenu>
-				<f:selectItem itemValue="Masculino" itemLabel="Masculino"/>
-				<f:selectItem itemValue="Feminino" itemLabel="Feminino"/>
-			</h:selectOneMenu> </td>
-			
+				<td>Nome: </td> 
+				<td><h:inputText required="true"></h:inputText></td>
 			</tr>
 			<tr>
-			<td> Nacionalidade: <h:inputText required="true"></h:inputText> </td>
-			<td> <h:commandButton value="Cadastrar" action="#"/> </td>
+				<td> Nacionalidade: </td> 
+				<td><h:inputText required="true"></h:inputText> </td>
+			</tr>
+			<tr> 
+				<td colspan="2">
+					<h:selectOneMenu>
+						<f:selectItem itemValue="Masculino" itemLabel="Masculino"/>
+						<f:selectItem itemValue="Feminino" itemLabel="Feminino"/>
+					</h:selectOneMenu> 
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"> <h:commandButton value="Cadastrar" action="#"/> </td>
 			</tr>
 		</table>
 	</h:form>

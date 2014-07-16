@@ -63,12 +63,16 @@
 	<h:form>
 		<table>
 			<tr>
-				<td>Nome: <h:inputText required="true"></h:inputText></td>
-				<td>Salário: <h:inputText required="true"></h:inputText> </td> 
+				<td>Nome: </td> <td> <h:inputText required="true"></h:inputText></td>
 			</tr>
 			<tr>
-				<td>Função: <h:inputText required="true"></h:inputText></td>
-				<td> <h:commandButton value="Cadastrar" action="#"/> </td>
+				<td>Salário: </td> <td> <h:inputText required="true"></h:inputText> </td> 
+			</tr>
+			<tr>
+				<td>Função: </td> <td> <h:inputText required="true"></h:inputText></td>
+			</tr>
+			<tr >
+				<td colspan="2"> <h:commandButton value="Cadastrar" action="#"/> </td>
 			</tr>
 		</table>
 	</h:form>
