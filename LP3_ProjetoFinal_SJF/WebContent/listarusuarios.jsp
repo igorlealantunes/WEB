@@ -60,7 +60,7 @@
 		
 <div id="interacao-menu">
 
-	<h:dataTable border="1" value="#{usuarioController.listUsuarios}" var="usuarios">
+	<h:dataTable id="listar" border="1" value="#{usuarioController.listUsuarios}" var="usuarios">
     	<h:column>	
 	        <f:facet name="header">
 	            <h:outputText value="Nome" />
