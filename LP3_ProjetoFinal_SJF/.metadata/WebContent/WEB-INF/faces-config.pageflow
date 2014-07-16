@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14054676929250" configfile="/LP3_ProjetoFinal_SJF/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="login" x="276" y="350" id="pf14054687394001" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14054688924806 pf14055515526190 pf14055516574631" path="/login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="login" x="276" y="350" id="pf14054687394001" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf14054688924806 pf14055515526190 pf14055516574631" path="/login.jsp"/>
   <nodes xsi:type="pageflow:PFPage" name="index" x="168" y="350" id="pf14054687394003" path="/index.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="error" x="566" y="444" id="pf14054687394034" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14054688924806" path="/error.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="menu" x="566" y="256" id="pf14054687394035" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14055515526190" path="/menu.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="menu_cliente" x="355" y="193" id="pf14055516574632" inlinks="pf14055516574631" path="/menu_cliente.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="error" x="566" y="444" id="pf14054687394034" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14054688924806" path="/error.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="menu" x="566" y="256" id="pf14054687394035" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14055515526190" path="/menu.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="menu_cliente" x="355" y="193" id="pf14055516574632" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf14055516574631" path="/menu_cliente.jsp"/>
   <links id="pf14054688924806" target="pf14054687394034" source="pf14054687394001" outcome="loginFail"/>
   <links id="pf14055515526190" target="pf14054687394035" source="pf14054687394001" outcome="TYPE_ADM"/>
   <links id="pf14055516574631" target="pf14055516574632" source="pf14054687394001" outcome="TYPE_CLIENTE"/>

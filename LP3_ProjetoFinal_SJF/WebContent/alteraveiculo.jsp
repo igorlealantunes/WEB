@@ -5,13 +5,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<title>Cadastro de Usuários</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>Insert title here</title>
 </head>
 <body>
 <f:view>
 
-<div id="conteudo-menu">
+
+		<div id="conteudo-menu">
 		
 		<div id="topo-menu">
 		
@@ -49,8 +50,8 @@
 				<li>Listar
 					<ul>	
 						<a href="listarusuarios.jsp"> <li> Listagem Usuários </li> </a>
-						<a href="listaroveiculo.jsp"> <li> Listagem de Veículos </li> </a>
-						<a href="listarfuncionario.jsp"> <li> Listagem de Funcionários </li> </a>
+						<a href="listarveiculos.jsp"> <li> Listagem de Veículos </li> </a>
+						<a href="listarfuncionarios.jsp"> <li> Listagem de Funcionários </li> </a>
 												
 					</ul>
 				</li>
