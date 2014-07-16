@@ -29,4 +29,9 @@ public class FuncionarioController {
 		listFuncionarios = DAOFuncionario.getList();
 		return listFuncionarios;
 	}
+	
+	public String addFuncionario() {
+		DAOFuncionario.inserir(funcionario);
+		return "";
+	}
 }
