@@ -10,6 +10,7 @@ public class VeiculoController {
 	private List<Veiculo> listVeiculos;
 	private DAOVeiculo DAOVeiculo;
 	private Veiculo veiculo;
+	private String placa;
 	
 	public VeiculoController() {
 		DAOVeiculo = new DAOVeiculo();
@@ -28,9 +29,24 @@ public class VeiculoController {
 		this.veiculo = veiculo;
 	}
 	
+	public String getPlaca() {
+		return placa;
+	}
+
+	public void setPlaca(String placa) {
+		this.placa = placa;
+	}
+
 	public String addVeiculo() {
 		DAOVeiculo.inserir(veiculo);
 		return "";
+	}
+	
+	public String delVeiculo() {
+		
+		DAOVeiculo.remover(placa);
+		return "";
+		
 	}
 	
 }

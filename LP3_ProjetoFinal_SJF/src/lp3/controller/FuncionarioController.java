@@ -10,6 +10,7 @@ public class FuncionarioController {
 	private List<Funcionario> listFuncionarios;
 	private Funcionario funcionario;
 	private DAOFuncionario DAOFuncionario;
+	private String nome;
 	
 	public FuncionarioController() {
 		DAOFuncionario = new DAOFuncionario();
@@ -24,6 +25,14 @@ public class FuncionarioController {
 	public void setFuncionario(Funcionario funcionario) {
 		this.funcionario = funcionario;
 	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
 	public String addFuncionario() {
 		DAOFuncionario.inserir(funcionario);
@@ -33,5 +42,12 @@ public class FuncionarioController {
 	public List<Funcionario> getListFuncionarios() {
 		listFuncionarios = DAOFuncionario.getList();
 		return listFuncionarios;
+	}
+	
+	public String delFuncionario() {
+		
+		DAOFuncionario.remover(nome);
+		return "";
+		
 	}
 }
