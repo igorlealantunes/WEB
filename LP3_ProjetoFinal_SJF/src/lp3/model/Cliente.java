@@ -18,8 +18,6 @@ public class Cliente {
 		
 	}
 
-	
-	
 	public String getUsuario() {
 		return usuario;
 	}
