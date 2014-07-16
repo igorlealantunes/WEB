@@ -28,7 +28,7 @@ public class VeiculoController {
 		this.veiculo = veiculo;
 	}
 	
-	public String addFuncionario() {
+	public String addVeiculo() {
 		DAOVeiculo.inserir(veiculo);
 		return "";
 	}
