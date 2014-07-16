@@ -3,17 +3,17 @@ package lp3.data.memoria;
 import java.util.List;
 import java.util.Vector;
 
-import lp3.data.IDAOVeiculo;
+import lp3.data.IDAO;
 import lp3.model.Veiculo;
 
-public class DAOVeiculo implements IDAOVeiculo {
+public class DAOVeiculo implements IDAO {
 	
-	private List<Veiculo> veiculos;
+	private List<Object> veiculos;
 	private int id;
 	
 	public DAOVeiculo() {
 		
-		this.veiculos = new Vector<Veiculo>();
+		this.veiculos = new Vector<Object>();
 		this.id = 1;
 		
 		Veiculo veiculo1 = new Veiculo("Gol", "VW", "carro", 2000, "XXX-9090");
@@ -29,13 +29,15 @@ public class DAOVeiculo implements IDAOVeiculo {
 		
 	}
 	
-	public List<Veiculo> listarVeiculos() {
+	public List<Object> getList() {
 		
 		return this.veiculos;
 		
 	}
 	
-	public boolean inserirVeiculo(Veiculo veiculo) {
+	public boolean inserir(Object o) {
+		
+		Veiculo veiculo = (Veiculo) o;
 		
 		veiculo.setId(id++);
 		boolean resultado = veiculos.add(veiculo);
@@ -44,11 +46,13 @@ public class DAOVeiculo implements IDAOVeiculo {
 		
 	}
 	
-	public boolean removerVeiculo(String placa) {
+	public boolean remover(String placa) {
 		
 		boolean resultado = false;
 		
-		for(Veiculo v : veiculos) {
+		for(Object vei : veiculos) {
+			
+			Veiculo v = (Veiculo) vei;
 			
 			if(v.getPlaca().equals(placa)) {
 				
@@ -63,9 +67,13 @@ public class DAOVeiculo implements IDAOVeiculo {
 		
 	}
 	
-	public void alterarVeiculo(String placaantigo, Veiculo novoveiculo) {
+	public void alterar(String placaantigo, Object objeto) {
 		
-		for(Veiculo v : veiculos) {
+		Veiculo novoveiculo = (Veiculo) objeto;
+		
+		for(Object vei : veiculos) {
+			
+			Veiculo v = (Veiculo) vei;
 			
 			if(v.getPlaca().equals(placaantigo)) {
 				
