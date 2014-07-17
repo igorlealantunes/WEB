@@ -42,7 +42,17 @@ public class VeiculoController {
 	}
 
 	public String addVeiculo() {
-		DAOVeiculo.inserir(veiculo);
+		boolean result = DAOVeiculo.inserir(veiculo);
+		
+		String message = "Vehicle "+veiculo.getPlaca()+" added successfully!";
+		
+		if(result == false) {
+			message = "Erro, try again";		
+		}
+		
+		FacesContext.getCurrentInstance().addMessage(null, 
+			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+		
 		return "";
 	}
 	
