@@ -1,0 +1,44 @@
+body { 
+	
+	
+	background: #FFFFCC; 
+	
+}
+
+.jumbotron{
+	
+	background: black;
+	text-align: center;
+	
+}
+
+h1 {
+	 
+	text-shadow:2px 2px black;
+	
+}
+
+#titulo {
+	
+	color: white;
+	
+}
+
+#imagem {
+	
+	position: absolute;
+	left: 10%;
+	top:15%
+	
+}
+
+#conteudo {
+	
+	
+	position:absolute; 
+	top:45%;  
+	left:50%; 
+	height: 250px;
+	width: 250px;
+	
+}
