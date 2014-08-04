@@ -42,3 +42,16 @@ h1 {
 	width: 250px;
 	
 }
+
+#menu {
+	
+	border-bottom: solid 5px black;
+	border-top: solid 5px black;
+	
+}
+
+table { 
+	
+	text-align: center; 
+	
+}
