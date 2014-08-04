@@ -32,6 +32,13 @@ public class LoginController {
 	public String getLogin() {
 		return login;
 	}
+	
+	public boolean hasSession() {
+		if(login != null && senha != null)
+			return true;
+		else
+			return false;
+	}
 
 	public void setLogin(String login) {
 		this.login = login;

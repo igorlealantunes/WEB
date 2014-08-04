@@ -1,3 +1,8 @@
+<%@page import="java.util.Collections"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.Iterator"%>
+<%@page import="java.util.Enumeration"%>
+<%@page import="org.apache.jasper.tagplugins.jstl.core.ForEach"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="f"  uri="http://java.sun.com/jsf/core"%>
 <%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
@@ -11,6 +16,7 @@
 <body>
 <f:view>
 
+
 <div id="conteudo-menu">
 		
 		<div id="topo-menu">
@@ -19,7 +25,7 @@
 		</div>
 
 		<div id="menu">
-			
+		
 			<ul>
 				<li>Cadastrar
 					<ul>	

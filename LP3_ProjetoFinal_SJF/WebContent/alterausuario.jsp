@@ -1,4 +1,9 @@
+<%@page import="lp3.controller.LoginController"%>
+<%@page import="java.util.Collections"%>
+<%@page import="java.util.Collection"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page autoFlush="true" buffer="1094kb"%> 
 <%@ taglib prefix="f"  uri="http://java.sun.com/jsf/core"%>
 <%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,8 +14,11 @@
 <title>Cadastro de Usuários</title>
 </head>
 <body>
-<f:view>
 
+    <%@include file="verificaSession.jsp"%>  
+    
+<f:view>		  	
+		  	
 <div id="conteudo-menu">
 		
 		<div id="topo-menu">
