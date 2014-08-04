@@ -4,63 +4,110 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	 <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+	<script language="javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<title>Insert title here</title>
+	
 </head>
 	<body>
-	<f:view>
-	
-		<div id="conteudo-menu">
 		
-		<div id="topo-menu">
+		<!-- INÍCIO MENU -->
 		
-			<p>Projeto LP3 - Parte 2</p>
-		</div>
-
-		<div id="menu">
-			
-			<ul>
-				<li>Cadastrar
-					<ul>	
-						<a href="cadastrousuario.jsp"> <li> Cadastro de Usuários </li> </a>
-						<a href="cadastroveiculo.jsp"> <li> Cadastro de Veículos </li> </a>
-						<a href="cadastrofuncionario.jsp"> <li> Cadastro de Funcionários </li> </a>
-						
-					</ul>
-				</li>
-				<li>Editar
-					<ul>	
-						<a href="alterausuario.jsp"> <li> Alteração de Usuários </li>  </a>
-						<a href="alteraveiculo.jsp"> <li> Alteração de Veículos </li>  </a>
-						<a href="alterafuncionario.jsp"> <li> Alteração de Funcionários </li>  </a>
-						
-					</ul>
-				</li>
-				<li>Remover
-					<ul>	
-						<a href="removeusuario.jsp"> <li> Remoção de Usuários </li> </a>
-						<a href="removeveiculo.jsp"> <li> Remoção de Veículos </li> </a>
-						<a href="removefuncionario.jsp"> <li> Remoção de Funcionários </li> </a>
-						
-					</ul>
+		<nav id="menu" class="navbar navbar-default" role="navigation">
+		
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <img src="img/car_icon.png" alt="..." class="navbar-brand">
+		    </div>
+		
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        
+		        <li class="dropdown">
+				
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				    	Cadastrar <span class="caret"></span>
+				    </a>
+					<ul class="dropdown-menu">
+				    	<li> <a href="cadastrousuario.jsp">Cadastro de Usuários</a> </li>
+				    	<li> <a href="cadastroveiculo.jsp">Cadastro de Veículos</a> </li>
+				    	<li> <a href="cadastrofuncionario.jsp">Cadastro de Funcionários</a> </li>
+				    </ul>
+				    
 				</li>
 				
-				<li>Listar
-					<ul>	
-						<a href="listarusuarios.jsp"> <li> Listagem Usuários </li> </a>
-						<a href="listarveiculos.jsp"> <li> Listagem de Veículos </li> </a>
-						<a href="listarfuncionarios.jsp"> <li> Listagem de Funcionários </li> </a>
-												
-					</ul>
+				<li class="dropdown">
+				
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				    	Editar <span class="caret"></span>
+				    </a>
+					<ul class="dropdown-menu">
+				    	<li> <a href="alterausuario.jsp">Alteração de Usuários</a> </li>
+				    	<li> <a href="alteraveiculo.jsp">Alteração de Veículos</a> </li>
+				    	<li> <a href="alterafuncionario.jsp">Alteração de Funcionários</a> </li>
+				    	
+				    </ul>
+				    
 				</li>
-			</ul>
-		</div>		
-		<div id="interacao-menu">
-		</div>
-	</div>
+				
+				<li class="dropdown">
+				
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				    	Remover <span class="caret"></span>
+				    </a>
+					<ul class="dropdown-menu">
+				    	<li> <a href="removeusuario.jsp">Remoção de Usuários</a> </li>
+				    	<li> <a href="removeveiculo.jsp">Remoção de Veículos</a> </li>
+				    	<li> <a href="removefuncionario.jsp">Remoção de Funcionários</a> </li>
+				    	
+				    </ul>
+				    
+				</li>
+				
+				<li class="dropdown">
+				
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				    	Listar <span class="caret"></span>
+				    </a>
+					<ul class="dropdown-menu">
+				    	<li> <a href="listarusuarios.jsp">Listagem de Usuários</a> </li>
+				    	<li> <a href="listarveiculos.jsp">Listagem de Veículos</a> </li>
+				    	<li> <a href="listarfuncionarios.jsp">Listagem de Funcionários</a> </li>
+				    	
+				    </ul>
+				    
+				</li>
+				
+		      </ul>
+		      
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">Logoff</a></li>
+		        
+		      </ul>
+		      
+		      
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		
+		<!-- FIM MENU -->
+		
+		<!-- INÍCIO CORPO -->
+		
+		<!-- FIM CORPO -->
 	
-	</f:view>
 	</body>
 </html>
