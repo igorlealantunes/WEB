@@ -10,13 +10,14 @@
 	 <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
 	<script language="javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
 	<title>Insert title here</title>
 	
 </head>
 	<body>
+		<f:view>
 		
 		<!-- INÍCIO MENU -->
-		
 		<nav id="menu" class="navbar navbar-default" role="navigation">
 		
 		  <div class="container-fluid">
@@ -83,9 +84,10 @@
 				    	Listar <span class="caret"></span>
 				    </a>
 					<ul class="dropdown-menu">
-				    	<li> <a href="listarusuarios.jsp">Listagem de Usuários</a> </li>
-				    	<li> <a href="listarveiculos.jsp">Listagem de Veículos</a> </li>
-				    	<li> <a href="listarfuncionarios.jsp">Listagem de Funcionários</a> </li>
+						
+				    	<li> <a id="listarusuario" href="#">Listagem de Usuários</a> </li>
+				    	<li> <a id="listarveiculo" href="#">Listagem de Veículos</a> </li>
+				    	<li> <a id="listarfuncionario" href="#">Listagem de Funcionários</a> </li>
 				    	
 				    </ul>
 				    
@@ -106,8 +108,12 @@
 		<!-- FIM MENU -->
 		
 		<!-- INÍCIO CORPO -->
+		<div id="corpo">
+		
+		
+		</div>
 		
 		<!-- FIM CORPO -->
-	
+	</f:view>
 	</body>
 </html>
