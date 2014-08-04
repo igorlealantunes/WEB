@@ -41,7 +41,17 @@ public class UsuarioController {
 		return listUsuarios;
 	}
 	public String addUsuario() {
-		DAOUsuario.inserir(usuario);
+		boolean result = DAOUsuario.inserir(usuario);
+		
+		String message = "User "+usuario.getNome()+" added successfully!";
+		
+		if(result == false) {
+			message = "Erro, try again";		
+		}
+		
+		FacesContext.getCurrentInstance().addMessage(null, 
+			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+		
 		return "";
 	}	
 	public String delUsuario() {		

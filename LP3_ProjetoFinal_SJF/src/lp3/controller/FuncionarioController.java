@@ -43,7 +43,17 @@ public class FuncionarioController {
 	}
 	
 	public String addFuncionario() {
-		DAOFuncionario.inserir(funcionario);
+		boolean result = DAOFuncionario.inserir(funcionario);
+		
+		String message = "Employer "+funcionario.getNome()+" added successfully!";
+		
+		if(result == false) {
+			message = "Erro, try again";		
+		}
+		
+		FacesContext.getCurrentInstance().addMessage(null, 
+			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+		
 		return "";
 	}
 	public String delFuncionario() {		
