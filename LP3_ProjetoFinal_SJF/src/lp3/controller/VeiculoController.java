@@ -84,6 +84,9 @@ public class VeiculoController {
 		FacesContext.getCurrentInstance().addMessage(null, 
 			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
 		
+		this.veiculo = new Veiculo();
+		this.placa = "";
+		
 		return result;	
 	}
 	

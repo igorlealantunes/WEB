@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	
+	// CADASTRO
+	
 	$("#cadastrousuario").on('click', function(){
 		
 		$("#corpo").load("cadastrousuario.jsp");
@@ -17,6 +19,28 @@ $(document).ready(function(){
 		$("#corpo").load("cadastrofuncionario.jsp");
 		
 	});
+	
+	// EDIÇÃO
+	
+	$("#alterausuario").on('click', function(){
+		
+		$("#corpo").load("alterausuario.jsp");
+		
+	});
+	
+	$("#alteraveiculo").on('click', function(){
+		
+		$("#corpo").load("alteraveiculo.jsp");
+		
+	});
+	
+	$("#alterafuncionario").on('click', function(){
+		
+		$("#corpo").load("alterafuncionario.jsp");
+		
+	});
+	
+	// LISTAGEM
 	
 	$("#listarusuario").on('click', function() {
 	

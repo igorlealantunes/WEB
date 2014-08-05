@@ -54,9 +54,9 @@
 				    	Editar <span class="caret"></span>
 				    </a>
 					<ul class="dropdown-menu">
-				    	<li> <a href="alterausuario.jsp">Alteração de Usuários</a> </li>
-				    	<li> <a href="alteraveiculo.jsp">Alteração de Veículos</a> </li>
-				    	<li> <a href="alterafuncionario.jsp">Alteração de Funcionários</a> </li>
+				    	<li> <a id="alterausuario" href="#">Alteração de Usuários</a> </li>
+				    	<li> <a id="alteraveiculo" href="#">Alteração de Veículos</a> </li>
+				    	<li> <a id="alterafuncionario" href="#">Alteração de Funcionários</a> </li>
 				    	
 				    </ul>
 				    

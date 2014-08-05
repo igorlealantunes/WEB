@@ -1,106 +1,33 @@
-<%@page import="lp3.controller.LoginController"%>
-<%@page import="java.util.Collections"%>
-<%@page import="java.util.Collection"%>
-<%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ page autoFlush="true" buffer="1094kb"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="f"  uri="http://java.sun.com/jsf/core"%>
 <%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<title>Cadastro de Usuários</title>
-</head>
-<body>
 
-    <%@include file="verificaSession.jsp"%>  
-    
-<f:view>		  	
-		  	
-<div id="conteudo-menu">
+	<f:view>
+		<h:form id="form-cadastro" styleClass="form-horizontal">
 		
-		<div id="topo-menu">
-		
-			<p>Projeto LP3 - Parte 2</p>
-		</div>
-
-		<div id="menu">
+			<div class="form-group">
+				<label for="inputnomealtera" class="col-sm-2 control-label">Nome</label>
+				<h:inputText styleClass="form-control" id="inputnomealtera" required="true" value="#{usuarioController.nome}"></h:inputText>
+			</div>
+			<div class="form-group">
+				<h4>Novos Dados</h4>
+			</div>
+			<div class="form-group">
+				<label for="inputnome" class="col-sm-2 control-label">Nome</label>
+				<h:inputText styleClass="form-control" id="inputnome" required="true" value="#{usuarioController.usuario.nome}"></h:inputText>
+			</div>
+			<div class="form-group">	
+				<label for="inputnacionalidade" class="col-sm-2 control-label" >Nacionalidade</label>
+				<h:inputText styleClass="form-control" id="inputnacionalidade" required="true" value="#{usuarioController.usuario.nacionalidade}"></h:inputText> </td>
+			</div>
+			<div class="form-group">
+				<h:selectOneMenu styleClass="form-control" value="#{usuarioController.usuario.sexo}">
+					<f:selectItem itemValue="Masculino" itemLabel="Masculino"/>
+					<f:selectItem itemValue="Feminino" itemLabel="Feminino"/>
+				</h:selectOneMenu> 
+			</div>
+			<h:commandButton styleClass="btn btn-success" value="Cadastrar" action="#{usuarioController.alteraUsuario}"/> </td>
+			<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 			
-			<ul>
-				<li>Cadastrar
-					<ul>	
-						<a href="cadastrousuario.jsp"> <li> Cadastro de Usuários </li> </a>
-						<a href="cadastroveiculo.jsp"> <li> Cadastro de Veículos </li> </a>
-						<a href="cadastrofuncionario.jsp"> <li> Cadastro de Funcionários </li> </a>
-						
-					</ul>
-				</li>
-				<li>Editar
-					<ul>	
-						<a href="alterausuario.jsp"> <li> Alteração de Usuários </li>  </a>
-						<a href="alteraveiculo.jsp"> <li> Alteração de Veículos </li>  </a>
-						<a href="alterafuncionario.jsp"> <li> Alteração de Funcionários </li>  </a>
-						
-					</ul>
-				</li>
-				<li>Remover
-					<ul>	
-						<a href="removeusuario.jsp"> <li> Remoção de Usuários </li> </a>
-						<a href="removeveiculo.jsp"> <li> Remoção de Veículos </li> </a>
-						<a href="removefuncionario.jsp"> <li> Remoção de Funcionários </li> </a>
-						
-					</ul>
-				</li>
-				
-				<li>Listar
-					<ul>	
-						<a href="listarusuarios.jsp"> <li> Listagem Usuários </li> </a>
-						<a href="listaroveiculo.jsp"> <li> Listagem de Veículos </li> </a>
-						<a href="listarfuncionario.jsp"> <li> Listagem de Funcionários </li> </a>
-												
-					</ul>
-				</li>
-			</ul>
-		</div>
-
-<div id="interacao-menu">
-
-	<h:form>
-		<table>
-			<tr>
-				<td> Usuario a ser editado </td> 
-				<td><h:inputText required="true" value="#{usuarioController.nome}"></h:inputText></td>
-			</tr>
-			
-			<tr>
-				<td>Novo Nome: </td> 
-				<td><h:inputText required="true" value="#{usuarioController.usuario.nome}"></h:inputText></td>
-			</tr>
-			<tr>
-				<td> Nova Nacionalidade: </td> 
-				<td><h:inputText required="true" value="#{usuarioController.usuario.nacionalidade}"></h:inputText> </td>
-			</tr>
-			<tr> 
-				<td colspan="2">
-					<h:selectOneMenu value="#{usuarioController.usuario.sexo}">
-						<f:selectItem itemValue="Masculino" itemLabel="Masculino"/>
-						<f:selectItem itemValue="Feminino" itemLabel="Feminino"/>
-					</h:selectOneMenu> 
-				</td>
-			</tr>
-			<tr>
-				<td colspan="2"> <h:commandButton value="Confirma" action="#{usuarioController.alteraUsuario}"/> </td>
-				<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
-			</tr>
-		</table>
-		
-	</h:form>
-
-</div>
-</div>
-
-</f:view>
-</body>
-</html>
+		</h:form>
+	</f:view>

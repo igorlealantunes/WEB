@@ -83,6 +83,9 @@ public class UsuarioController {
 		FacesContext.getCurrentInstance().addMessage(null, 
 			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
 		
+		this.usuario = new Usuario();
+		this.nome = "";
+		
 		return result;	
 	}
 	
