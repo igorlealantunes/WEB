@@ -5,7 +5,14 @@
 <%@ taglib prefix="f"  uri="http://java.sun.com/jsf/core"%>
 <%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
 
-<% List<Veiculo> lista = new VeiculoController().getListVeiculos();	%>
+
+<% VeiculoController bean = (VeiculoController) getServletContext().getAttribute("veiculoController"); %>
+<% if(bean == null) { %>
+<% bean = new VeiculoController(); %>
+<% getServletContext().setAttribute("veiculoController", bean); %>
+<% } %>
+
+<% List<Veiculo> lista = bean.getListVeiculos(); %>
 
 [
 

@@ -41,6 +41,7 @@ public class UsuarioController {
 		return listUsuarios;
 	}
 	public String addUsuario() {
+		
 		boolean result = DAOUsuario.inserir(usuario);
 		
 		String message = "User "+usuario.getNome()+" added successfully!";
@@ -51,6 +52,8 @@ public class UsuarioController {
 		
 		FacesContext.getCurrentInstance().addMessage(null, 
 			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+		
+		this.usuario = new Usuario();
 		
 		return "";
 	}	

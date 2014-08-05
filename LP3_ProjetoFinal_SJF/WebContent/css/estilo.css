@@ -56,13 +56,10 @@ table  {
 	
 }
 
-form {
+form#form-cadastro {
 	
-	padding: 10px;
-	background: #E6E6E6;
+	position:absolute;
 	width: 300px;
-	position:absolute; 
-	top:35%;  
-	left:37%; 
+	left: 35%;
 	
 }

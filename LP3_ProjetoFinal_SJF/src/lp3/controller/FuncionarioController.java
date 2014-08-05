@@ -54,6 +54,8 @@ public class FuncionarioController {
 		FacesContext.getCurrentInstance().addMessage(null, 
 			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
 		
+		this.funcionario = new Funcionario();
+		
 		return "";
 	}
 	public String delFuncionario() {		

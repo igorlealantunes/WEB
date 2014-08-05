@@ -6,8 +6,12 @@
 <%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
 
 
-
-<% List<Usuario> lista = new UsuarioController().getListUsuarios();	%>
+<% UsuarioController bean = (UsuarioController) getServletContext().getAttribute("usuarioController"); %>
+<% if (bean == null)  { %>
+<%	bean = new UsuarioController(); %> 
+<%	getServletContext().setAttribute("usuarioController", bean); %>
+<%  } %>
+<% List<Usuario> lista = bean.getListUsuarios(); %>
 
 [
 
@@ -21,10 +25,11 @@
 	
 	}
 	
-	<% if ((lista.indexOf(u) + 1) != lista.size()) {%>
-	,
+	<%if ((lista.indexOf(u) + 1) != lista.size()) { %>
+		,
+			
 	<%} %>
 	
 <% } %>
-	
+
 ]

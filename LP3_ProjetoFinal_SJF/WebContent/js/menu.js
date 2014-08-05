@@ -6,6 +6,18 @@ $(document).ready(function(){
 		
 	});
 	
+	$("#cadastroveiculo").on('click', function(){
+		
+		$("#corpo").load("cadastroveiculo.jsp");
+		
+	});
+	
+	$("#cadastrofuncionario").on('click', function(){
+		
+		$("#corpo").load("cadastrofuncionario.jsp");
+		
+	});
+	
 	$("#listarusuario").on('click', function() {
 	
 		$.post("listarusuarios.jsp", function(data){

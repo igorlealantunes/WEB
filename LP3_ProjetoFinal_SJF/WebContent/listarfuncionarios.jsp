@@ -5,7 +5,13 @@
 <%@ taglib prefix="f"  uri="http://java.sun.com/jsf/core"%>
 <%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
 
-<% List<Funcionario> lista = new FuncionarioController().getListFuncionarios();	%>
+<% FuncionarioController bean = (FuncionarioController) getServletContext().getAttribute("funcionarioController"); %>
+<% if(bean == null) { %>
+<% bean = new FuncionarioController(); %>
+<% getServletContext().setAttribute("funcionarioController", bean); %>
+<% } %>
+
+<% List<Funcionario> lista = bean.getListFuncionarios(); %>
 
 [
 

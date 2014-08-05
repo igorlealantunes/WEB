@@ -44,8 +44,8 @@
 				    </a>
 					<ul class="dropdown-menu">
 				    	<li> <a id="cadastrousuario" href="#">Cadastro de Usuários</a> </li>
-				    	<li> <a href="cadastroveiculo.jsp">Cadastro de Veículos</a> </li>
-				    	<li> <a href="cadastrofuncionario.jsp">Cadastro de Funcionários</a> </li>
+				    	<li> <a id="cadastroveiculo"  href="#">Cadastro de Veículos</a> </li>
+				    	<li> <a id="cadastrofuncionario" href="#">Cadastro de Funcionários</a> </li>
 				    </ul>
 				    
 				</li>
