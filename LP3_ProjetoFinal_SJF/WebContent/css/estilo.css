@@ -1,7 +1,7 @@
 body { 
 	
 	
-	background: #FFFFCC; 
+	background: #FFFFCC;
 	
 }
 
@@ -24,22 +24,24 @@ h1 {
 	
 }
 
-#imagem {
-	
-	position: absolute;
-	left: 10%;
-	top:15%
+#conteudo {
+
+	margin: auto;
+    width: 45%;
 	
 }
 
-#conteudo {
-	
-	
-	position:absolute; 
-	top:45%;  
-	left:50%; 
+
+#imagem {
+
+	width: 300px;
+
+}
+
+#form-login {
+
+	width: 200px;
 	height: 250px;
-	width: 250px;
 	
 }
 
@@ -56,16 +58,9 @@ table  {
 	
 }
 
-form#form-cadastro {
+#corpo {
 	
-	position:absolute;
-	width: 300px;
-	left: 35%;
-	
-}
-
-table#tabela-listagem {
-	
-	border: solid 2px black;
+	margin:auto;
+	width: 200px;
 	
 }

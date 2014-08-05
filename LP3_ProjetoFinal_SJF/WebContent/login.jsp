@@ -12,22 +12,25 @@
 </head>
 <body>
 
+	
+
 	<div class="jumbotron">
 
-		<h1 id="titulo">Concessionária</h1>
-
-
-	</div>
-
-	<div id="imagem">
-
-		<img src="img/car_icon.png" class="img-responsive"
-			alt="Responsive image">
+		<h1 id="titulo">Locadora de Veículos</h1>
 
 	</div>
+		
+	<div id="conteudo" class="row">
+	
+		<div id="imagem" class="col-md-1">
+	
+			<img src="img/car_icon.png" class="img-responsive"
+				alt="Responsive image">
+	
+		</div>
 
-	<div id="conteudo">
-		<div id="container">
+
+		<div id="form-login" class="col-md-1">
 			<f:view>
 				<h:form styleClass="form-signin">
 
@@ -53,6 +56,7 @@
 			</f:view>
 
 		</div>
+		
 	</div>
 
 </body>
