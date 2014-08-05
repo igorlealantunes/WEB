@@ -11,7 +11,7 @@
 	<script language="javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/menu.js"></script>
-	<title>Insert title here</title>
+	<title>Locadora de Veículos</title>
 	
 </head>
 	<body>
@@ -110,8 +110,6 @@
 		<!-- FIM MENU -->
 		
 		<!-- INÍCIO CORPO -->
-		
-		<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 		
 		<div id="corpo">
 		
