@@ -50,8 +50,19 @@ h1 {
 	
 }
 
-table { 
+table  { 
 	
-	text-align: center; 
+	background: #E6E6E6;
+	
+}
+
+form {
+	
+	padding: 10px;
+	background: #E6E6E6;
+	width: 300px;
+	position:absolute; 
+	top:35%;  
+	left:37%; 
 	
 }

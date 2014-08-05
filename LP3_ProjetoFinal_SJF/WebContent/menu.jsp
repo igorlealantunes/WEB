@@ -43,7 +43,7 @@
 				    	Cadastrar <span class="caret"></span>
 				    </a>
 					<ul class="dropdown-menu">
-				    	<li> <a href="cadastrousuario.jsp">Cadastro de Usuários</a> </li>
+				    	<li> <a id="cadastrousuario" href="#">Cadastro de Usuários</a> </li>
 				    	<li> <a href="cadastroveiculo.jsp">Cadastro de Veículos</a> </li>
 				    	<li> <a href="cadastrofuncionario.jsp">Cadastro de Funcionários</a> </li>
 				    </ul>

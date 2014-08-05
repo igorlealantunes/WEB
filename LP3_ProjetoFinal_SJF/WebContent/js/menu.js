@@ -1,12 +1,18 @@
 $(document).ready(function(){
 	
+	$("#cadastrousuario").on('click', function(){
+		
+		$("#corpo").load("cadastrousuario.jsp");
+		
+	});
+	
 	$("#listarusuario").on('click', function() {
 	
 		$.post("listarusuarios.jsp", function(data){
 			
 			var str = "";
 			
-			str = "<table class='table table-hover'> <tr> <td>NOME</td> <td>SEXO</td> <td>NACIONALIDADE</td> </tr>";
+			str = "<table class='table table-striped'> <thead> <th>NOME</th> <th>SEXO</th> <th>NACIONALIDADE</th> </thead><tbody>";
 			
 			for(var i=0; i < data.length; i++){
 				
@@ -14,7 +20,7 @@ $(document).ready(function(){
 				
 			}
 			
-			str += "</table>";
+			str += "</tbody></table>";
 			
 			$("#corpo").html(str);
 			
@@ -26,11 +32,11 @@ $(document).ready(function(){
 	
 	$("#listarveiculo").on('click', function(){
 		
-$.post("listarveiculos.jsp", function(data){
+		$.post("listarveiculos.jsp", function(data){
 			
 			var str = "";
 			
-			str = "<table class='table table-hover'> <tr> <td>PLACA</td> <td>MODELO</td> <td>MARCA</td> <td>ANO</td> <td>TIPO</td> </tr>";
+			str = "<table class='table table-striped'> <thead> <th>PLACA</th> <th>MODELO</th> <th>MARCA</th> <th>ANO</th> <th>TIPO</th> </thead><tbody>";
 			
 			for(var i=0; i < data.length; i++){
 				
@@ -38,11 +44,34 @@ $.post("listarveiculos.jsp", function(data){
 				
 			}
 			
-			str += "</table>";
+			str += "</tbody></table>";
 			
 			$("#corpo").html(str);
 			
 		
+		}, "json");
+		
+	});
+	
+	$("#listarfuncionario").on('click', function(){
+		
+		$.post("listarfuncionarios.jsp", function(data){
+			
+			var str = "";
+			
+			str = "<table class='table table-striped'> <thead> <th>NOME</th> <th>FUNCAO</th> <th>SALARIO</th> </thead><tbody>";
+			
+			for(var i=0; i < data.length; i++){
+				
+				str += "<tr><td>" + data[i].nome + "</td><td>" + data[i].funcao + "</td><td> R$ " + data[i].salario + "</td></tr>"; 
+				
+			}
+			
+			str += "</tbody></table>";
+			
+			$("#corpo").html(str);
+			
+			
 		}, "json");
 		
 	});
