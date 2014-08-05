@@ -24,7 +24,7 @@ $(document).ready(function(){
 			
 			var str = "";
 			
-			str = "<table class='table table-striped'> <thead> <th>NOME</th> <th>SEXO</th> <th>NACIONALIDADE</th> </thead><tbody>";
+			str = "<table id ='tabela-listagem' class='table table-striped'> <thead> <th>NOME</th> <th>SEXO</th> <th>NACIONALIDADE</th> </thead><tbody>";
 			
 			for(var i=0; i < data.length; i++){
 				
@@ -48,7 +48,7 @@ $(document).ready(function(){
 			
 			var str = "";
 			
-			str = "<table class='table table-striped'> <thead> <th>PLACA</th> <th>MODELO</th> <th>MARCA</th> <th>ANO</th> <th>TIPO</th> </thead><tbody>";
+			str = "<table id ='tabela-listagem' class='table table-striped'> <thead> <th>PLACA</th> <th>MODELO</th> <th>MARCA</th> <th>ANO</th> <th>TIPO</th> </thead><tbody>";
 			
 			for(var i=0; i < data.length; i++){
 				
@@ -71,7 +71,7 @@ $(document).ready(function(){
 			
 			var str = "";
 			
-			str = "<table class='table table-striped'> <thead> <th>NOME</th> <th>FUNCAO</th> <th>SALARIO</th> </thead><tbody>";
+			str = "<table id ='tabela-listagem' class='table table-striped'> <thead> <th>NOME</th> <th>FUNCAO</th> <th>SALARIO</th> </thead><tbody>";
 			
 			for(var i=0; i < data.length; i++){
 				

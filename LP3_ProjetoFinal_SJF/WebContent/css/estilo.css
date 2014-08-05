@@ -63,3 +63,9 @@ form#form-cadastro {
 	left: 35%;
 	
 }
+
+table#tabela-listagem {
+	
+	border: solid 2px black;
+	
+}

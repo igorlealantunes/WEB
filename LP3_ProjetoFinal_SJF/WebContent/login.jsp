@@ -38,16 +38,15 @@
 						<h:inputText id="login" styleClass="form-control"
 							value="#{loginController.login}" required="true" />
 					</div>
-
 					<div class="form-group">
 						<label for="senha">Password</label>
 						<h:inputSecret id="senha" styleClass="form-control"
 							value="#{loginController.senha}" required="true" />
 					</div>
-
-					<h:commandButton styleClass="btn btn-lg btn-success btn-block"
+					
+					
+					<h:commandButton  id="btlogin" styleClass="btn btn-lg btn-success btn-block"
 						value="Login" action="#{loginController.verificaLogin}" />
-
 					<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 
 				</h:form>
