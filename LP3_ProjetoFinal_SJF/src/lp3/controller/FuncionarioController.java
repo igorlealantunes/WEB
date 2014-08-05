@@ -6,7 +6,6 @@ import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 
 import lp3.data.memoria.DAOFuncionario;
-import lp3.data.memoria.DAOUsuario;
 import lp3.model.Funcionario;
 
 public class FuncionarioController {
