@@ -18,7 +18,7 @@
 		<f:view>
 		
 		<!-- INÍCIO MENU -->
-		<nav id="menu" class="navbar navbar-default" role="navigation">
+		<nav id="menu" class="navbar navbar-default navbar-inverse" role="navigation">
 		
 		  <div class="container-fluid">
 		    
@@ -29,7 +29,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <img src="img/car_icon.png" alt="..." class="navbar-brand">
+		      <img id="logo" src="img/car_icon.png" alt="..." class="navbar-brand img-rounded">
 		    </div>
 		
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -102,7 +102,11 @@
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-		
+		<div id="stripes" class="panel panel-default">
+		  	<div class="panel-body">
+		  
+			</div>
+		</div>
 		<!-- FIM MENU -->
 		
 		<!-- INÍCIO CORPO -->

@@ -19,6 +19,12 @@
 		<h1 id="titulo">Locadora de Veículos</h1>
 
 	</div>
+	
+	<div id="stripes" class="panel panel-default">
+	  	<div class="panel-body">
+	  
+		</div>
+	</div>
 		
 	<div id="conteudo" class="row">
 	

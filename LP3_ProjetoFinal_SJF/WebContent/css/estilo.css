@@ -9,6 +9,22 @@ body {
 	
 	background: black;
 	text-align: center;
+	margin: 0px;
+	
+}
+
+#stripes {
+	
+	background: repeating-linear-gradient(
+	  90deg,
+	  black,
+	  black 9px,
+	  yellow 10px,
+	  yellow 20px
+	);
+	
+	border: none;
+	height: 20px;
 	
 }
 
@@ -38,6 +54,13 @@ h1 {
 
 }
 
+#logo {
+	
+	background: #E6E6E6;
+	padding: 0px;
+	
+}
+
 #form-login {
 
 	width: 200px;
@@ -47,8 +70,7 @@ h1 {
 
 #menu {
 	
-	border-bottom: solid 5px black;
-	border-top: solid 5px black;
+	margin: 0px;
 	
 }
 
@@ -61,6 +83,12 @@ table  {
 #corpo {
 	
 	margin:auto;
+	
+}
+
+#form-cadastro {
+	
+	margin: auto;
 	width: 200px;
 	
 }
