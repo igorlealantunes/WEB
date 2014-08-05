@@ -26,7 +26,7 @@
 					<f:selectItem itemValue="Feminino" itemLabel="Feminino"/>
 				</h:selectOneMenu> 
 			</div>
-			<h:commandButton styleClass="btn btn-success" value="Cadastrar" action="#{usuarioController.alteraUsuario}"/> </td>
+			<h:commandButton styleClass="btn btn-primary" value="Alterar" action="#{usuarioController.alteraUsuario}"/> </td>
 			<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 			
 		</h:form>

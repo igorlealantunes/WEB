@@ -25,7 +25,7 @@
 				<h:inputText styleClass="form-control" id="inputfuncao" required="true" value="#{funcionarioController.funcionario.funcao}"></h:inputText> </td>
 			</div>
 			
-			<h:commandButton styleClass="btn btn-success" value="Cadastrar" action="#{funcionarioController.alteraFuncionario}"/> </td>
+			<h:commandButton styleClass="btn btn-primary" value="Alterar" action="#{funcionarioController.alteraFuncionario}"/> </td>
 			<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 			
 		</h:form>

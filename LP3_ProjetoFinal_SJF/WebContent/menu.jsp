@@ -68,9 +68,9 @@
 				    	Remover <span class="caret"></span>
 				    </a>
 					<ul class="dropdown-menu">
-				    	<li> <a href="removeusuario.jsp">Remoção de Usuários</a> </li>
-				    	<li> <a href="removeveiculo.jsp">Remoção de Veículos</a> </li>
-				    	<li> <a href="removefuncionario.jsp">Remoção de Funcionários</a> </li>
+				    	<li> <a id="removeusuario" href="#">Remoção de Usuários</a> </li>
+				    	<li> <a id="removeveiculo" href="#">Remoção de Veículos</a> </li>
+				    	<li> <a id="removefuncionario" href="#">Remoção de Funcionários</a> </li>
 				    	
 				    </ul>
 				    

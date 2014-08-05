@@ -40,6 +40,26 @@ $(document).ready(function(){
 		
 	});
 	
+	// DELEÇÃO
+	
+	$("#removeusuario").on('click', function(){
+		
+		$("#corpo").load("removeusuario.jsp");
+		
+	});
+	
+	$("#removeveiculo").on('click', function(){
+		
+		$("#corpo").load("removeveiculo.jsp");
+		
+	});
+	
+	$("#removefuncionario").on('click', function(){
+		
+		$("#corpo").load("removefuncionario.jsp");
+		
+	});
+	
 	// LISTAGEM
 	
 	$("#listarusuario").on('click', function() {

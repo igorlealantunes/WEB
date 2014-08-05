@@ -69,6 +69,8 @@ public class FuncionarioController {
 		
 		FacesContext.getCurrentInstance().addMessage(null, 
 			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+		
+		this.nome = "";
 		return "";		
 	}
 	public String alteraFuncionario() {		

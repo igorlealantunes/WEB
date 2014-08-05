@@ -34,7 +34,7 @@
 					<f:selectItem itemValue="Motocicleta" itemLabel="Motocicleta"/>
 				</h:selectOneMenu> 
 			</div>
-			<h:commandButton styleClass="btn btn-success" value="Cadastrar" action="#{veiculoController.alteraVeiculo}"/> </td>
+			<h:commandButton styleClass="btn btn-primary" value="Alterar" action="#{veiculoController.alteraVeiculo}"/> </td>
 			<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 			
 		</h:form>
