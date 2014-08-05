@@ -9,10 +9,8 @@
 				<label for="inputnome" class="col-sm-2 control-label">Nome</label>
 				<h:inputText styleClass="form-control" id="inputnome" required="true" value="#{funcionarioController.nome}"></h:inputText>
 			</div>
-			
-			
-			<h:commandButton styleClass="btn btn-danger" value="Remover" action="#{funcionarioController.delFuncionario}"/> </td>
-			<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
+		
+			<h:commandButton styleClass="btn btn-danger" value="Remover" action="#{funcionarioController.delFuncionario}"/>
 			
 		</h:form>
 	</f:view>

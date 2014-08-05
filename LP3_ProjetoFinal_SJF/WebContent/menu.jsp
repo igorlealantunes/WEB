@@ -110,6 +110,9 @@
 		<!-- FIM MENU -->
 		
 		<!-- INÍCIO CORPO -->
+		
+		<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
+		
 		<div id="corpo">
 		
 		
