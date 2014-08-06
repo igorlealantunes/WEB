@@ -136,7 +136,7 @@ $(document).ready(function(){
 	
 	$(".restrito").on('click', function(){
 		
-		$("#corpo").html("<h1 class='label label-danger'>Acesso restrito a ADMINISTRADORES</h1>");
+		$("#corpo").html("<div class='alert alert-danger' 'alert-dismissible' role='alert'> <button type='button' class='close' data-dismiss='alert'><span aria-hidden='true'>&times;</span><span class='sr-only'>Close</span></button>Acesso restrito a <strong>ADMINISTRADORES</strong></div>");
 		
 	});
 	
