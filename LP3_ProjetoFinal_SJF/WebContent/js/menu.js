@@ -132,5 +132,13 @@ $(document).ready(function(){
 		
 	});
 	
+	// RESTRITO
+	
+	$(".restrito").on('click', function(){
+		
+		$("#corpo").html("<h1 class='label label-danger'>Acesso restrito a ADMINISTRADORES</h1>");
+		
+	});
+	
 });
 

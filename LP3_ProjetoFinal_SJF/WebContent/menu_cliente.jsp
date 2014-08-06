@@ -4,63 +4,119 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<script language="javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script language="javascript" src="js/menu_cliente.js"></script>
-<title>Insert title here</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	 <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
+	<script language="javascript" src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<title>Locadora de Veículos</title>
+	
 </head>
 	<body>
-	<f:view>
+		<f:view>
 		
-		<div id="conteudo-menu">
+		<!-- INÍCIO MENU -->
+		<nav id="menu" class="navbar navbar-default navbar-inverse" role="navigation">
 		
-		<div id="topo-menu">
+		  <div class="container-fluid">
+		    
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <img id="logo" src="img/car_icon.png" alt="..." class="navbar-brand img-rounded">
+		    </div>
 		
-			<p>Projeto LP3 - Parte 2</p>
-		</div>
-
-		<div id="menu">
-			
-			<ul>
-				<li>Cadastrar
-					<ul>	
-						<li class="restrito"> Cadastro de Usuários </li>
-						<li class="restrito"> Cadastro de Veículos </li>
-						<li class="restrito"> Cadastro de Funcionários </li>
-						
-					</ul>
-				</li>
-				<li id="restrito">Editar
-					<ul>	
-						<li class="restrito"> Alteração de Usuários </li>  
-						<li class="restrito"> Alteração de Veículos </li>  
-						<li class="restrito"> Alteração de Funcionários </li>
-						
-					</ul>
-				</li>
-				<li id="restrito">Remover
-					<ul>	
-						<li class="restrito"> Remoção de Usuários </li> 
-						<li class="restrito"> Remoção de Veículos </li>
-						<li class="restrito"> Remoção de Funcionários </li>
-						
-					</ul>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        
+		        <li class="dropdown">
+				
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				    	Cadastrar <span class="caret"></span>
+				    </a>
+					<ul class="dropdown-menu">
+				    	<li> <a class="restrito" href="#">Cadastro de Usuários</a> </li>
+				    	<li> <a class="restrito"  href="#">Cadastro de Veículos</a> </li>
+				    	<li> <a class="restrito" href="#">Cadastro de Funcionários</a> </li>
+				    </ul>
+				    
 				</li>
 				
-				<li>Listar
-					<ul>	
-						<a href="listarusuarios.jsp"> <li> Listagem Usuários </li> </a>
-						<a href="listarveiculos.jsp"> <li> Listagem de Veículos </li> </a>
-						<a href="listarfuncionarios.jsp"> <li> Listagem de Funcionários </li> </a>
-												
-					</ul>
+				<li class="dropdown">
+				
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				    	Editar <span class="caret"></span>
+				    </a>
+					<ul class="dropdown-menu">
+				    	<li> <a class="restrito" href="#">Alteração de Usuários</a> </li>
+				    	<li> <a class="restrito" href="#">Alteração de Veículos</a> </li>
+				    	<li> <a class="restrito" href="#">Alteração de Funcionários</a> </li>
+				    	
+				    </ul>
+				    
 				</li>
-			</ul>
-		</div>		
-	
-	</div>
-	
+				
+				<li class="dropdown">
+				
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				    	Remover <span class="caret"></span>
+				    </a>
+					<ul class="dropdown-menu">
+				    	<li> <a class="restrito" href="#">Remoção de Usuários</a> </li>
+				    	<li> <a class="restrito" href="#">Remoção de Veículos</a> </li>
+				    	<li> <a class="restrito" href="#">Remoção de Funcionários</a> </li>
+				    	
+				    </ul>
+				    
+				</li>
+				
+				<li class="dropdown">
+				
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+				    	Listar <span class="caret"></span>
+				    </a>
+					<ul class="dropdown-menu">
+						
+				    	<li> <a id="listarusuario" href="#">Listagem de Usuários</a> </li>
+				    	<li> <a id="listarveiculo" href="#">Listagem de Veículos</a> </li>
+				    	<li> <a id="listarfuncionario" href="#">Listagem de Funcionários</a> </li>
+				    	
+				    </ul>
+				    
+				</li>
+				
+		      </ul>
+		      
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#">Logoff</a></li>
+		        
+		      </ul>
+		      
+		      
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+		<div id="stripes" class="panel panel-default">
+		  	<div class="panel-body">
+		  
+			</div>
+		</div>
+		<!-- FIM MENU -->
+		
+		<!-- INÍCIO CORPO -->
+
+		<div id="corpo">
+		
+		
+		</div>
+		
+		<!-- FIM CORPO -->
 	</f:view>
 	</body>
 </html>
