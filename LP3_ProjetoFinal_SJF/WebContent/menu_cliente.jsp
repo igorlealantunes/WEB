@@ -15,6 +15,7 @@
 	
 </head>
 	<body>
+	<%@ include file="verificaSession.jsp" %>
 		<f:view>
 		
 		<!-- INÍCIO MENU -->

@@ -52,12 +52,15 @@ public class UsuarioController {
 			message = "Erro, try again";		
 		}
 		
-		FacesContext.getCurrentInstance().addMessage(null, 
-			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+		
 		
 		this.usuario = new Usuario();
 		
 		ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+		
+		FacesContext.getCurrentInstance().addMessage(null, 
+			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
+		
 		try {
 			externalContext.redirect("menu.jsp");
 		} catch (IOException e) {

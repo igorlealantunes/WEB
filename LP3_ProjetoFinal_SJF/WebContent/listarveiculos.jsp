@@ -6,6 +6,7 @@
 <%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
 
 
+
 <% VeiculoController bean = (VeiculoController) getServletContext().getAttribute("veiculoController"); %>
 <% if(bean == null) { %>
 <% bean = new VeiculoController(); %>
