@@ -1,8 +1,10 @@
 package lp3.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.faces.application.FacesMessage;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
 import lp3.data.memoria.DAOUsuario;
@@ -55,6 +57,13 @@ public class UsuarioController {
 		
 		this.usuario = new Usuario();
 		
+		ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+		try {
+			externalContext.redirect("menu.jsp");
+		} catch (IOException e) {
+			
+		}
+		
 		return "";
 	}	
 	public String delUsuario() {		
@@ -70,6 +79,13 @@ public class UsuarioController {
 			       new FacesMessage(FacesMessage.SEVERITY_INFO, message, null));
 		
 		this.nome = "";
+		
+		ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+		try {
+			externalContext.redirect("menu.jsp");
+		} catch (IOException e) {
+			
+		}
 		
 		return "";	
 	}
@@ -87,6 +103,13 @@ public class UsuarioController {
 		
 		this.usuario = new Usuario();
 		this.nome = "";
+		
+		ExternalContext externalContext = FacesContext.getCurrentInstance().getExternalContext();
+		try {
+			externalContext.redirect("menu.jsp");
+		} catch (IOException e) {
+			
+		}
 		
 		return result;	
 	}
