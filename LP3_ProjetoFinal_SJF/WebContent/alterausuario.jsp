@@ -2,6 +2,7 @@
 <%@ taglib prefix="f"  uri="http://java.sun.com/jsf/core"%>
 <%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
 
+<%@ include file="verificaSession.jsp" %>
 	<f:view>
 		<h:form id="form-cadastro" styleClass="form-horizontal">
 		

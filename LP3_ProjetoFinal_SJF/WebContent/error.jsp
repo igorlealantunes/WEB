@@ -5,6 +5,6 @@
     </head>
     <body>
         <h2>Error!</h2>
-        The user-id and or password were invalid.  Please try again.
+        There's no active session  !! 
     </body>
 </html>

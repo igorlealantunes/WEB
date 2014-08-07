@@ -6,6 +6,7 @@
 <%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
 
 
+
 <% UsuarioController bean = (UsuarioController) getServletContext().getAttribute("usuarioController"); %>
 <% if (bean == null)  { %>
 <%	bean = new UsuarioController(); %> 
