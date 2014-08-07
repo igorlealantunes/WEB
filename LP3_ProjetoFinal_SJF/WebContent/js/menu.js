@@ -140,5 +140,13 @@ $(document).ready(function(){
 		
 	});
 	
+	// LOGOFF
+	
+	$("#logoff").on('click', function() {
+		
+		$("body").load("logoff.jsp");
+		
+	});
+	
 });
 

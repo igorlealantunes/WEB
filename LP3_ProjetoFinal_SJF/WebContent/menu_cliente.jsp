@@ -95,7 +95,7 @@
 		      </ul>
 		      
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#">Logoff</a></li>
+		        <li><a id="logoff" href="#">Logoff</a></li>
 		        
 		      </ul>
 		      

@@ -18,7 +18,7 @@
 	
 </head>
 	<body>
-	
+	<%@ include file="verificaSession.jsp" %>
 		<f:view>
 		
 		<!-- INÍCIO MENU -->
@@ -97,9 +97,8 @@
 				
 		      </ul>
 		      
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#">Logoff</a></li>
-		        
+		      <ul id="logoff" class="nav navbar-nav navbar-right">
+		        <li><a id="logoff" href="#">Logoff</a></li>
 		      </ul>
 		      
 		      

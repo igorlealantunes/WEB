@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpSession;
 
 import lp3.data.memoria.DAOCliente;
 import lp3.data.memoria.DAOAdministrador;
@@ -70,16 +71,6 @@ public class LoginController {
 			       new FacesMessage(FacesMessage.SEVERITY_INFO, "Username or password incorrect", null));
 		return "login incorrect";
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }

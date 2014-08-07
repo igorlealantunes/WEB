@@ -30,7 +30,6 @@
 		  	for(String st : s) {
 				System.out.println(s);
 		  }
-		  	
 		    session.invalidate();
 		    RequestDispatcher rd = request.getRequestDispatcher("error.jsp");
 		    rd.forward(request, response);
