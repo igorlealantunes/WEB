@@ -9,7 +9,7 @@
 				<label for="inputnome" class="col-sm-2 control-label">Nome</label>
 				<h:inputText styleClass="form-control" id="inputnome" required="true" value="#{usuarioController.nome}"></h:inputText>
 			</div>
-			<h:commandButton styleClass="btn btn-danger" value="Remover" action="#{usuarioController.delUsuario}"/> </td>
+			<h:commandButton styleClass="btn btn-danger" value="Remover" action="#{usuarioController.delUsuario}"/> 
 			<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 			
 		</h:form>

@@ -10,7 +10,7 @@
 				<h:inputText styleClass="form-control" id="inputplaca" required="true" value="#{veiculoController.placa}" ></h:inputText>
 			</div>
 			
-			<h:commandButton styleClass="btn btn-danger" value="Remover" action="#{veiculoController.delVeiculo}"/> </td>
+			<h:commandButton styleClass="btn btn-danger" value="Remover" action="#{veiculoController.delVeiculo}"/>
 			<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 			
 		</h:form>

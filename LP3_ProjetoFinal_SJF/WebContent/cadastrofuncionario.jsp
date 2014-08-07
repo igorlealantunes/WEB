@@ -11,14 +11,14 @@
 			</div>
 			<div class="form-group">	
 				<label for="inputsalario" class="col-sm-2 control-label" >Salário</label>
-				<h:inputText styleClass="form-control" id="inputsalario" required="true" value="#{funcionarioController.funcionario.salario}"></h:inputText> </td>
+				<h:inputText styleClass="form-control" id="inputsalario" required="true" value="#{funcionarioController.funcionario.salario}"></h:inputText>
 			</div>
 			<div class="form-group">	
 				<label for="inputfuncao" class="col-sm-2 control-label" >Função</label>
-				<h:inputText styleClass="form-control" id="inputfuncao" required="true" value="#{funcionarioController.funcionario.funcao}"></h:inputText> </td>
+				<h:inputText styleClass="form-control" id="inputfuncao" required="true" value="#{funcionarioController.funcionario.funcao}"></h:inputText>
 			</div>
 			
-			<h:commandButton styleClass="btn btn-success" value="Cadastrar" action="#{funcionarioController.addFuncionario}"/> </td>
+			<h:commandButton styleClass="btn btn-success" value="Cadastrar" action="#{funcionarioController.addFuncionario}"/>
 			<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 			
 		</h:form>

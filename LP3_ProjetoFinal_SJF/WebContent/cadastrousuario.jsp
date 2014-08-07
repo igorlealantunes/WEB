@@ -11,7 +11,7 @@
 			</div>
 			<div class="form-group">	
 				<label for="inputnacionalidade" class="col-sm-2 control-label" >Nacionalidade</label>
-				<h:inputText styleClass="form-control" id="inputnacionalidade" required="true" value="#{usuarioController.usuario.nacionalidade}"></h:inputText> </td>
+				<h:inputText styleClass="form-control" id="inputnacionalidade" required="true" value="#{usuarioController.usuario.nacionalidade}"></h:inputText>
 			</div>
 			<div class="form-group">
 				<h:selectOneMenu styleClass="form-control" value="#{usuarioController.usuario.sexo}">
@@ -19,7 +19,7 @@
 					<f:selectItem itemValue="Feminino" itemLabel="Feminino"/>
 				</h:selectOneMenu> 
 			</div>
-			<h:commandButton styleClass="btn btn-success" value="Cadastrar" action="#{usuarioController.addUsuario}"/> </td>
+			<h:commandButton styleClass="btn btn-success" value="Cadastrar" action="#{usuarioController.addUsuario}"/>
 			<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 			
 		</h:form>

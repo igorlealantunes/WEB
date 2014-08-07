@@ -24,7 +24,6 @@
 	  if ( !c.hasSession() )
 	  {
 		  
-		  
 			System.out.println(s.size());
 		  	for(String st : s) {
 				System.out.println(s);

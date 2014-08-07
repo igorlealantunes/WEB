@@ -7,7 +7,7 @@
 			
 			<div class="form-group">	
 				<label for="inputplacaaltera" class="col-sm-2 control-label" >Placa</label>
-				<h:inputText styleClass="form-control" id="inputplacaaltera" required="true" value="#{veiculoController.placa}"></h:inputText> </td>
+				<h:inputText styleClass="form-control" id="inputplacaaltera" required="true" value="#{veiculoController.placa}"></h:inputText>
 			</div>
 			<div class="form-group">
 				<h4>Novos Dados</h4>
@@ -18,15 +18,15 @@
 			</div>
 			<div class="form-group">	
 				<label for="inputmodelo" class="col-sm-2 control-label" >Modelo</label>
-				<h:inputText styleClass="form-control" id="inputmodelo" required="true" value="#{veiculoController.veiculo.modelo}"></h:inputText> </td>
+				<h:inputText styleClass="form-control" id="inputmodelo" required="true" value="#{veiculoController.veiculo.modelo}"></h:inputText>
 			</div>
 			<div class="form-group">	
 				<label for="inputano" class="col-sm-2 control-label" >Ano</label>
-				<h:inputText styleClass="form-control" id="inputano" required="true" value="#{veiculoController.veiculo.ano}"></h:inputText> </td>
+				<h:inputText styleClass="form-control" id="inputano" required="true" value="#{veiculoController.veiculo.ano}"></h:inputText>
 			</div>
 			<div class="form-group">	
 				<label for="inputplaca" class="col-sm-2 control-label" >Placa</label>
-				<h:inputText styleClass="form-control" id="inputplaca" required="true" value="#{veiculoController.veiculo.placa}"></h:inputText> </td>
+				<h:inputText styleClass="form-control" id="inputplaca" required="true" value="#{veiculoController.veiculo.placa}"></h:inputText>
 			</div>
 			<div class="form-group">
 				<h:selectOneMenu styleClass="form-control" value="#{veiculoController.veiculo.tipo}">
@@ -34,7 +34,7 @@
 					<f:selectItem itemValue="Motocicleta" itemLabel="Motocicleta"/>
 				</h:selectOneMenu> 
 			</div>
-			<h:commandButton styleClass="btn btn-primary" value="Alterar" action="#{veiculoController.alteraVeiculo}"/> </td>
+			<h:commandButton styleClass="btn btn-primary" value="Alterar" action="#{veiculoController.alteraVeiculo}"/>
 			<h:messages layout="table" style="color:red;margin:8px;"></h:messages>
 			
 		</h:form>
