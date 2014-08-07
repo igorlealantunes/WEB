@@ -16,11 +16,9 @@
 
 	session.removeAttribute("loginController");
 	session.invalidate();
-	RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-    rd.forward(request, response);
-	
+    
 %>
-
+<meta http-equiv="refresh" content="1; url=login.jsp">
 </f:view>
 
 </body>
