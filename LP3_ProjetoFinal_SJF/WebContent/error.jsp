@@ -25,13 +25,8 @@
 		</div>
 	</div>
 		
-	<div class="alert alert-danger alert-dismissible" role="alert"> 
-		<button type="button" class="close" data-dismiss="alert">
-			<span aria-hidden="true">&times;</span>
-			<span class="sr-only">Close</span>
-		</button>
-		Verificação de login <strong>INVÁLIDA</strong>
-	</div>
+	<h1><span class="label label-danger"> Area restrita </span></h1>
+
 
  
 </body>
