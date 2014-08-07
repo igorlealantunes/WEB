@@ -25,7 +25,7 @@
 		</div>
 	</div>
 		
-	<h1><span class="label label-danger">Verificação do Login Inválida! </span></h1>
+	<h1><span class="label label-danger"> Area restrita </span></h1>
 
  
 </body>
