@@ -27,7 +27,5 @@
 		
 	<h1><span class="label label-danger"> Area restrita </span></h1>
 
-
- 
 </body>
 </html>
