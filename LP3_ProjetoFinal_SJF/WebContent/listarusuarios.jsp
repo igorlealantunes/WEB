@@ -1,3 +1,4 @@
+<%@page import="lp3.controller.VerificaSession"%>
 <%@page import="lp3.model.Usuario"%>
 <%@page import="lp3.controller.UsuarioController"%>
 <%@page import="java.util.List"%> 
@@ -6,6 +7,11 @@
 <%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
 
 
+<% 
+
+VerificaSession.verify(request, response, session);
+
+%>
 
 <% UsuarioController bean = (UsuarioController) getServletContext().getAttribute("usuarioController"); %>
 <% if (bean == null)  { %>

@@ -1,10 +1,16 @@
+<%@page import="lp3.controller.VerificaSession"%>
 <%@page import="lp3.model.Funcionario"%>
 <%@page import="lp3.controller.FuncionarioController"%>
 <%@page import="java.util.List"%> 
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="application/json; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="f"  uri="http://java.sun.com/jsf/core"%>
 <%@ taglib prefix="h"  uri="http://java.sun.com/jsf/html"%>
 
+<% 
+
+VerificaSession.verify(request, response, session);
+
+%>
 
 
 <% FuncionarioController bean = (FuncionarioController) getServletContext().getAttribute("funcionarioController"); %>
