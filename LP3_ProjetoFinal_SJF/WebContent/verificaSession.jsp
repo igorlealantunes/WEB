@@ -22,14 +22,11 @@
       
 	if(session.getAttribute("loginController") != null) {	
 	  	LoginController c = (LoginController) session.getAttribute("loginController");
-		System.out.println(c.getLogin() + "  " +c.getSenha());
+		
 	  if ( !c.hasSession() )
 	  {
 		  
-			System.out.println(s.size());
-		  	for(String st : s) {
-				System.out.println(s);
-		  }
+			
 		    session.invalidate();
 		    RequestDispatcher rd = request.getRequestDispatcher("error.jsp");
 		    rd.forward(request, response);
@@ -37,10 +34,7 @@
 				
 	  } else {
 		  
-			System.out.println(s.size());
-		  	for(String st : s) {
-				System.out.println(s);
-		  }
+			
 	  }
 	} else {
 			session.invalidate();
